@@ -1,21 +1,427 @@
 
-body {
-  background: url(https://i.pinimg.com/originals/61/de/2b/61de2ba956418acd9ab454ceca15bbb2.jpg);
+.App { 
+   text-align: center;
+ background: url(https://i.pinimg.com/originals/61/de/2b/61de2ba956418acd9ab454ceca15bbb2.jpg);
 background-size: cover;
 background-position: center;
   background-repeat: no-repeat;
-   text-align: center;
-   display: flex;
-   align-items: center;
+      display: flex;
+   
+   
+}
+
+
+
+body {
+ text-align: center;
+align-items: center;
    justify-content: center;
    text-align: center;
 
 }
 
 
-
-.App { 
-   text-align: center;
-
-   
+hr{
+  display:block;
+  margin:0 auto;
+  height:15px;
+  width:50%;
+  border:none;
+  border-radius: 3px;
+  border-left:15px solid #2192FF;
+  border-right:15px #38E54D;
+  animation: KARRAnim 1s infinite ease-in-out alternate;
 }
+
+hr:before{
+  content:" ";
+  display:inline-block;
+  width:15px;
+  height:15px;
+  border-left:15px solid #2192FF;
+  border-right:15px #38E54D;
+  animation: KARRAnim 1s infinite ease-in-out alternate;
+}
+
+hr:after{
+  content:" ";
+  display:inline-block;
+  width:15px;
+  height:15px;
+  border-left:15px solid #9CFF2E;
+  background-color:#9CFF2E;
+  border-right:15px solid #9CFF2E;
+  animation: KARRAnim 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even)
+{
+  animation: KARRAnim 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even):after
+{
+  animation: KARRAnimAfter 1s infinite ease-in-out alternate;
+}
+
+hr:nth-child(even):before
+{
+  animation: KARRAnimBefore 1s infinite ease-in-out alternate;
+}
+
+/**
+    Keyframes
+Do not try at home
+
+**/
+
+
+
+@keyframes KARRAnim {
+   0% {
+      background-color:#38E54D;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #38E54D;
+   }
+   10% {
+      background-color:#38E54D;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #38E54D;
+   }
+   20% {
+      background-color:#38E54D;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #38E54D;
+   }
+   30% {
+      background-color:#38E54D;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #38E54D;
+   }
+   40% {
+      background-color:#38E54D;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #38E54D;
+   }
+   50% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   60% {
+      background-color:#EA047E;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FF6D28;
+   }
+   70% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   80% {
+      background-color:#2192FF;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FDFF00;
+   }
+   90% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #2192FF;
+   }
+   100% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #2192FF;
+   }
+}
+
+@keyframes KARRAnimBefore {
+   0% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   10% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   20% {
+      background-color:#FDFF00;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #EA047E;
+   }
+   30% {
+      background-color:#2192FF;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FDFF00;
+   }
+   40% {
+      background-color:#FDFF00;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #2192FF;
+   }
+   50% {
+      background-color:#EA047E;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #FDFF00;
+   }
+   60% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   70% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FF6D28;
+   }
+   80% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   90% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   100% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+}
+
+@keyframes KARRAnimAfter {
+   0% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   10% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   20% {
+      background-color:#38E54D;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #38E54D;
+   }
+   30% {
+      background-color:#FF6D28;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #38E54D;
+   }
+   40% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   50% {
+      background-color:#FDFF00;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #EA047E;
+   }
+   60% {
+      background-color:#2192FF;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FDFF00;
+   }
+   70% {
+      background-color:#FDFF00;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #2192FF;
+   }
+   80% {
+      background-color:#EA047E;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #FDFF00;
+   }
+   90% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   100% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+}
+
+@keyframes KARRAnim {
+   0% {
+      background-color:#38E54D;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #38E54D;
+   }
+   10% {
+      background-color:#38E54D;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #38E54D;
+   }
+   20% {
+      background-color:#38E54D;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #38E54D;
+   }
+   30% {
+      background-color:#38E54D;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #38E54D;
+   }
+   40% {
+      background-color:#38E54D;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #38E54D;
+   }
+   50% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   60% {
+      background-color:#EA047E;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FF6D28;
+   }
+   70% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   80% {
+      background-color:#2192FF;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FDFF00;
+   }
+   90% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #2192FF;
+   }
+   100% {
+      background-color:#FDFF00;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #2192FF;
+   }
+}
+
+@keyframes KARRAnimBefore {
+   0% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   10% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   20% {
+      background-color:#FDFF00;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #EA047E;
+   }
+   30% {
+      background-color:#2192FF;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FDFF00;
+   }
+   40% {
+      background-color:#FDFF00;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #2192FF;
+   }
+   50% {
+      background-color:#EA047E;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #FDFF00;
+   }
+   60% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   70% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #FF6D28;
+   }
+   80% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   90% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   100% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+}
+
+@keyframes KARRAnimAfter {
+   0% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   10% {
+      background-color:#38E54D;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #38E54D;
+   }
+   20% {
+      background-color:#38E54D;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #38E54D;
+   }
+   30% {
+      background-color:#FF6D28;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #38E54D;
+   }
+   40% {
+      background-color:#EA047E;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FF6D28;
+   }
+   50% {
+      background-color:#FDFF00;
+      border-left:15px solid #2192FF;
+      border-right:15px solid #EA047E;
+   }
+   60% {
+      background-color:#2192FF;
+      border-left:15px solid #FDFF00;
+      border-right:15px solid #FDFF00;
+   }
+   70% {
+      background-color:#FDFF00;
+      border-left:15px solid #EA047E;
+      border-right:15px solid #2192FF;
+   }
+   80% {
+      background-color:#EA047E;
+      border-left:15px solid #FF6D28;
+      border-right:15px solid #FDFF00;
+   }
+   90% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+   100% {
+      background-color:#FF6D28;
+      border-left:15px solid #38E54D;
+      border-right:15px solid #EA047E;
+   }
+}
+

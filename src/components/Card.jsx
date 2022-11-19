@@ -17,10 +17,10 @@ export default function Card(props) {
                   <img  src={props.image} alt=""className={styles.imgCharacter} />
                </div>   
 
-               <div className={styles.infoExtra}>
-                  <h2>{props.species}</h2>
-                  <h2>{props.gender}</h2> 
-               </div>
+        
+                  <h2 className={styles.infoExtra}>{props.species}</h2>
+                  <h2 className={styles.infoExtra}>{props.gender}</h2> 
+               
           
          </div>
    );
