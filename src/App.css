@@ -1,18 +1,15 @@
 
 .App { 
    text-align: center;
- background: url(https://i.pinimg.com/originals/61/de/2b/61de2ba956418acd9ab454ceca15bbb2.jpg);
-background-size: cover;
-background-position: center;
-  background-repeat: no-repeat;
-      display: flex;
-   
-   
 }
 
 
 
-body {
+body { background: url(https://i.pinimg.com/originals/61/de/2b/61de2ba956418acd9ab454ceca15bbb2.jpg);
+background-size: cover;
+background-position: center;
+  background-repeat: no-repeat;
+      display: flex;
  text-align: center;
 align-items: center;
    justify-content: center;

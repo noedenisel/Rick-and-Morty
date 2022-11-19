@@ -6,7 +6,7 @@ export default function NavBar(props) {
     return(
 <nav className={styles.nav}>
 
-        <SearchBar onSearch={(characterID) => window.alert(characterID)}
+        <SearchBar onSearch={props.onSearch} //=> window.alert(characterID)
         />
 
 </nav>

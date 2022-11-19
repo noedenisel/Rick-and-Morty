@@ -1,60 +1,48 @@
 import './App.css'
-import Card from './components/Card.jsx'
+//import Card from './components/Card.jsx'
 import Cards from './components/Cards.jsx'
-import SearchBar from './components/SearchBar.jsx'
-import characters, { Rick } from './data.js'
+//import SearchBar from './components/SearchBar.jsx'
+//import characters, { Rick } from './data.js'
 import NavBar from "./components/Nav"
+import characters from './data'
+import {useState} from "react"
 
 
 function App () {
-  return (
+    const [characters, setCharacters] = useState([
+     
+    ]);
+
+    function onSearch(){
+      //hace una busqueda 
+    const example= {
+      name: 'Morty Smith',
+      species: 'Human',
+      gender: 'Male',
+      image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+    };
+    setCharacters([...characters, example])
+    //generamos un nuevo estado que es una copia del estado anterior mas el nuevo v alor
+    }
     
-    <body  className='App' style={{ padding: '25px' }}>
-
-<div >
+    return ( 
+<div className='App' style={{ padding: '25px' }}>
   <div>
-    <NavBar/>
+    <NavBar onSearch={onSearch}/>
     </div>
-  
+
 <hr/>
-  {/** 
-    <section>
-    <div>
-    <Card
-      name={Rick.name}
-      species={Rick.species}
-      gender={Rick.gender}
-      image={Rick.image} 
-      onClose={() => window.alert('Emulamos que se cierra la card')}
-    />
-   
-</div> 
-<hr />
-</section>*/}
 
-  
-
-  <section>
   <div>
     <Cards
       characters={characters}
       />
-     
   </div> 
-  <hr />
-      </section>
-
-      
-{/**  <div>
-        <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
-        />
-      </div> 
-*/}
-    
+<hr />
 </div>
-</body>
   )
 }
 
-export default App
+export default  App
+
+
