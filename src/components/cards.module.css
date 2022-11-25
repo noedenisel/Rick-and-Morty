@@ -2,11 +2,12 @@
     background-color: #c94d7898;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
     border-radius: 10px;
-    display: inline-block;
-    align-content: center;
+
     margin:20px;
     border: black 5px solid;
-    order: 0
+
+
+  ;
 }
  
       .cards:hover{ 
@@ -47,5 +48,5 @@
 
     .imgCharacter{
         margin-top: 0px;
-  
+        
     }

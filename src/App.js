@@ -27,19 +27,22 @@ function App () {
     
     return ( 
 <div className='App' style={{ padding: '25px' }}>
-  <div>
+  <div >
     <NavBar onSearch={onSearch}/>
     </div>
 
-<hr/>
 
-  <div>
+
+  <div >
+    <hr/>
     <Cards
       characters={characters}
       />
+      <hr />
   </div> 
-<hr />
+
 </div>
+
   )
 }
 
