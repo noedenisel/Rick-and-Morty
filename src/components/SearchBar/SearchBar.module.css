@@ -9,6 +9,7 @@
     width:100%;
     height: 100%;
     margin-bottom: 15px;
+    margin-top: 15px;
    }
    
    .buttonAgregar {
@@ -17,9 +18,9 @@
         z-index: 1;
         border-radius: 10px;
         margin: 10px;
-        margin-bottom: 30px;
+
         box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-        width: 120px;
+        width: auto;
         height: 50px;
  
 
@@ -39,7 +40,7 @@
 
       input {
         display: inline-block;
-        max-width: 196px;
+        max-width: 230px;
         -webkit-box-sizing: content-box;
         -moz-box-sizing: content-box;
         box-sizing: content-box;

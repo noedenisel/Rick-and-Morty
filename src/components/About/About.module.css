@@ -1,0 +1,228 @@
+
+
+.About{
+
+    font-family: serif;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+
+}
+
+.container{
+    width: 700px;
+    margin: 0 auto;
+   
+
+
+}
+
+.h1{
+    color:#FFC23C;
+    font-family: 'Edu VIC WA NT Beginner';
+    font-size: 30px;
+    font-weight: lighter;
+
+
+
+}
+
+.h2{
+    color: white;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.h3{
+    color: #9AE66E;
+    font-size: 25px;
+    font-style:normal;
+    font-weight: lighter;
+}
+
+.p{
+    color: black;
+    font-size: 25px;
+    font-weight: lighter;
+    font-style: oblique;
+    font-family: 'Josefin Sans', sans-serif;
+ 
+}
+
+.img-circle{
+    border-radius: 50%;
+    width: 40%;
+   
+    
+}
+.cardAbout {
+    padding: 40px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.5);    
+    border: 0;
+    --border-radius: 15px;
+    --border-width: 4px;
+    margin: 20px 0px;
+    text-align: center;
+    appearance: none;
+    position: relative;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+
+   }
+   
+   .cardAbout::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: running
+   }
+   
+
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+   .cardAbout,
+   .cardAbout::after {
+    box-sizing: border-box;
+   }
+   
+   .cardAbout:active {
+    --border-width: 5px;
+   }
+
+
+
+.links,
+.links::after {
+ padding: 17px 20px;
+ margin-top: 10px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #4B73FF 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00e6f6;
+ outline: transparent;
+ position: relative;
+ align-items: center;
+ align-content: center;
+ justify-content: center;
+ vertical-align: middle;
+}
+
+.links::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "REGRESAR A LA PAGINA PRINCIPAL";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+.links:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
+
+

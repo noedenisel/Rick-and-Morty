@@ -1,0 +1,82 @@
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 05%;
+}
+
+.h1{
+  display: inline-block;
+        max-width: 250px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        padding: 10px 20px;
+        border: 5px solid #1d47fe;
+        -webkit-border-radius: 11px;
+        border-radius: 11px;
+        font: normal 19px/normal "Courier New", Courier, monospace;
+        color: rgba(42,255,0,1);
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        background: rgba(45,45,45,1);
+        box-shadow: 0 0 9px 4px rgba(0,0,0,0.15) , -1px 4px 8px -1px rgba(0,0,0,0.49) inset;
+        text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
+}
+.error{  
+        font-size: large;   
+        background: rgba(45, 45, 45, 0.871); 
+        color: rgb(252, 82, 82);
+}
+
+
+
+.ingresar{
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+.ingresar {
+    background: rgb(22,9,240);
+  background: linear-gradient(0deg, rgba(22,9,240,1) 0%, rgba(49,110,244,1) 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .ingresar:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+  }
+  .ingresar:hover {
+    color: #fff;
+    border: none;
+    background: transparent;
+  }
+  .ingresar:hover:after {
+    background: rgb(0,3,255);
+  background: linear-gradient(0deg, rgba(2,126,251,1) 0%,  rgba(0,3,255,1)100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  

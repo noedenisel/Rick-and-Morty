@@ -1,19 +1,6 @@
 
 .App { 
-   text-align: center; 
-
-}
-
-
-
-body {
-   
- display: flex;
- text-align: center;
- align-items: center;
-justify-content: center;
-text-align: center;
-
+   text-align: center;
 }
 
 
@@ -21,7 +8,7 @@ hr{
   display:block;
   margin:0 auto;
   height:15px;
-  width:50%;
+  width:150px;
   border:none;
   border-radius: 3px;
   border-left:15px solid #2192FF;

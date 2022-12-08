@@ -1,21 +1,21 @@
-.cards{
+/*verificar el tamaño de las cards porque cambia segun los personajes */
+.card{
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin:20px;
     background-color: #c94d7898;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
     border-radius: 10px;
-
-    margin:20px;
     border: black 5px solid;
+    width: 300px;
+    height: 650px;
+    overflow: hidden
+    }
+    
 
-
-  ;
-}
- 
-      .cards:hover{ 
-        background: #000000; 
-        background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%);
-        }
-
-    .button{
+.button{
         background: rgb(235, 234, 234);
         border: none;
         margin-top: 10px;
@@ -23,6 +23,11 @@
         margin-bottom: 30px;
         position: relative;
         float: right;
+        width: 10%;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid black;
+     
     }
     .button:hover{
         background: rgb(255, 0, 0);
@@ -31,22 +36,35 @@
         border-radius: 10px;
         }
 
- 
+    .info{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 
     .tittle{
+        display: flex;
         text-align: center;
         margin-left: 20px;
         background-color: white;
         border-radius: 30% 70% 39% 61% / 30% 30% 70% 70% ;
+        text-decoration: none;
     }
 
     .infoExtra{
         color: rgba(245, 245, 245, 0.879);
-        display: inline-flex;
-        margin: inherit
-    }
-
-    .imgCharacter{
-        margin-top: 0px;
+        justify-content: space-evenly;
         
     }
+
+    .link{
+        text-decoration:dotted;
+        color: black;
+     
+ 
+    }
+    
+
+
+
+
+
