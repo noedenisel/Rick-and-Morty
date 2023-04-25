@@ -4,7 +4,7 @@
 
 Este repositorio contiene una aplicación web que consume la API pública de "Rick and Morty" para mostrar información sobre los personajes, episodios y ubicaciones de la serie animada.
 
-La aplicación está desarrollada en JavaScript utilizando el framework React, y se utiliza la librería axios para hacer las peticiones a la API. Además, se ha utilizado Bootstrap para el diseño y la maquetación de la página.
+La aplicación está desarrollada en JavaScript utilizando el framework React, y se utiliza la librería axios para hacer las peticiones a la API. 
 
 ## Uso
 
@@ -16,7 +16,7 @@ Para utilizar esta aplicación, simplemente sigue estos pasos:
 4. Inicia la aplicación: `npm start`
 5. Abre tu navegador web y accede a la dirección http://localhost:3000/
 
-Una vez en la aplicación, podrás navegar entre las diferentes secciones (personajes, episodios y ubicaciones) y buscar información sobre tus favoritos de "Rick and Morty".
+Una vez en la aplicación, podrás navegar entre las diferentes secciones y buscar información sobre tus favoritos de "Rick and Morty".
 
 ## Contribuciones
 
