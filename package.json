@@ -1,4 +1,4 @@
-{
+{ "homepage": "noedenisel.github.io/Rick-and-Morty",
   "name": "rick_and_morty",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/noedenisel/Rick-and-Morty"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
