@@ -1,7 +1,7 @@
 //React
 import React, {useState} from "react"
 import { Route, Routes , useLocation, useNavigate, Navigate} from "react-router-dom"
-
+import { useEffect } from "react"
 
 //Componentes
 import './App.css'
@@ -20,17 +20,17 @@ function App () {
     //   characters == []
     //                 setCharacters funcion que actualilza el estado
 
-    const [setAccess] = useState(false);
+    const [access, setAccess] = useState(false);
     
-    const username = 'noelialombardo@hotmail.com';
+    const username = 'mail@example.com';
     const password = '123456p';
 
     const location = useLocation()
     const navigate = useNavigate();
 
-      // useEffect(() => {
-      // !access && navigate('/');
-      //  }, [access]);
+      useEffect(() => {
+      !access && navigate('/');
+       }, [access]);
       
       function login(userData) {
         if (userData.password === password && userData.username === username) {
