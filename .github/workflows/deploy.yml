@@ -7,7 +7,7 @@ on:
 
 jobs:
   my-job:
-    runs-on: self-hosted
+    runs-on: MacBook-Pro-de-Noe-Denise
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
