@@ -6,7 +6,7 @@ on:
       - main # O la rama que deseas desplegar
 
 jobs:
-  build:
+  my-job:
     runs-on: self-hosted
     steps:
     - name: Checkout code
