@@ -1,0 +1,3723 @@
+[2023-06-12 22:52:46Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-06-12 22:52:46Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:46Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:46Z INFO HostContext] Well known config file 'Credentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials'
+[2023-06-12 22:52:46Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:46Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:46Z INFO HostContext] Well known config file 'Runner': '/Users/noedenisel/Desktop/Rick-and-Morty/.runner'
+[2023-06-12 22:52:46Z INFO Worker] Version: 2.304.0
+[2023-06-12 22:52:46Z INFO Worker] Commit: 9ef4121b5b31ee5c03b7770288213d741081f747
+[2023-06-12 22:52:46Z INFO Worker] Culture: en-US
+[2023-06-12 22:52:46Z INFO Worker] UI Culture: en-US
+[2023-06-12 22:52:46Z INFO Worker] Waiting to receive the job message from the channel.
+[2023-06-12 22:52:46Z INFO ProcessChannel] Receiving message of length 22485, with hash 'dce9ee5c59446efa978aad57f6272ef7a78ad8107198e57b30efb5a1c68f88d4'
+[2023-06-12 22:52:46Z INFO Worker] Message received.
+[2023-06-12 22:52:47Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/main.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 12,
+        "col": 13,
+        "lit": "Checkout code"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "a60052d4-79a0-5821-3eeb-84adb9872c5b",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 13,
+        "lit": "Set up Node.js"
+      },
+      "contextName": "__actions_setup-node",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 18,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 9,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 23,
+              "lit": "14"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "50900611-96b2-5a08-ce5b-9701f7d7c3da",
+      "name": "__actions_setup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 20,
+        "col": 13,
+        "lit": "Install dependencies"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 12,
+              "lit": "npm ci"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dd23db01-cff6-57a4-373a-5c8097a97333",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 23,
+        "col": 13,
+        "lit": "Build"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 24,
+              "col": 12,
+              "lit": "npm run build"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "87b991c0-db8a-593e-4233-d8a37f15e4c9",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "JamesIves/github-pages-deploy-action",
+        "ref": "3.7.1",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 26,
+        "col": 13,
+        "lit": "Deploy to GitHub Pages"
+      },
+      "contextName": "__JamesIves_github-pages-deploy-action",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 29,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 29,
+              "col": 9,
+              "lit": "branch"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 29,
+              "col": 17,
+              "lit": "gh-pages"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 9,
+              "lit": "folder"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 17,
+              "lit": "build"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "0b638865-2f9a-533b-829f-241252f89907",
+      "name": "__JamesIves_github-pages-deploy-action"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2023-06-12 22:52:43+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "23"
+    },
+    "build.containerId": {
+      "value": "6722056"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/main.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build"
+    },
+    "system.jobId": {
+      "value": "ca395085-040a-526b-2ce8-bdc85f692774"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.orchestrationId": {
+      "value": "2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb.build.__default"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 31,
+    "planId": "2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/23",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "Rick-and-Morty"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "noedenisel"
+    }
+  },
+  "timeline": {
+    "id": "2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "ca395085-040a-526b-2ce8-bdc85f692774",
+  "jobDisplayName": "build",
+  "jobName": "__default",
+  "requestId": 39,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "f7394291-7891-4613-a83c-7298b01f71d5",
+          "ServerName": "JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN/",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb/timelines/2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb/records/ca395085-040a-526b-2ce8-bdc85f692774/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+        },
+        {
+          "k": "repository",
+          "v": "noedenisel/Rick-and-Morty"
+        },
+        {
+          "k": "repository_owner",
+          "v": "noedenisel"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "98433663"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/noedenisel/Rick-and-Morty.git"
+        },
+        {
+          "k": "run_id",
+          "v": "5249293640"
+        },
+        {
+          "k": "run_number",
+          "v": "6"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repo-self-hosted-runners-disabled",
+          "v": false
+        },
+        {
+          "k": "repository_id",
+          "v": "570341669"
+        },
+        {
+          "k": "actor_id",
+          "v": "98433663"
+        },
+        {
+          "k": "actor",
+          "v": "noedenisel"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "noedenisel"
+        },
+        {
+          "k": "workflow",
+          "v": "Deploy"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "d5a6293534a192eefc6d49b25668d1452a034b9a"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noelialombardo@hotmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "NoeDenise"
+                              },
+                              {
+                                "k": "username",
+                                "v": "noedenisel"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noelialombardo@hotmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "NoeDenise"
+                              },
+                              {
+                                "k": "username",
+                                "v": "noedenisel"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+                        },
+                        {
+                          "k": "message",
+                          "v": "eliminando lineas bugueadas"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-06-12T19:52:35-03:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "e2c33e9ec07457413b3d0a6ad78f835bf960a327"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/noedenisel/Rick-and-Morty/commit/9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/noedenisel/Rick-and-Morty/compare/d5a6293534a1...9b2abc13af85"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noelialombardo@hotmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "NoeDenise"
+                          },
+                          {
+                            "k": "username",
+                            "v": "noedenisel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noelialombardo@hotmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "NoeDenise"
+                          },
+                          {
+                            "k": "username",
+                            "v": "noedenisel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+                    },
+                    {
+                      "k": "message",
+                      "v": "eliminando lineas bugueadas"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2023-06-12T19:52:35-03:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "e2c33e9ec07457413b3d0a6ad78f835bf960a327"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/noedenisel/Rick-and-Morty/commit/9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "98433663+noedenisel@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "noedenisel"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/noedenisel/Rick-and-Morty.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1669335249.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "noedenisel/Rick-and-Morty"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/noedenisel/Rick-and-Morty.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": true
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/noedenisel/Rick-and-Morty"
+                    },
+                    {
+                      "k": "id",
+                      "v": 570341669.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "C"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "Rick-and-Morty"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOIf65JQ"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/98433663?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "98433663+noedenisel@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/noedenisel/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/noedenisel/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/noedenisel/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/noedenisel/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/noedenisel"
+                          },
+                          {
+                            "k": "id",
+                            "v": 98433663.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "noedenisel"
+                          },
+                          {
+                            "k": "name",
+                            "v": "noedenisel"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBd36fw"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/noedenisel/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/noedenisel/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/noedenisel/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/noedenisel/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/noedenisel/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/noedenisel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1686610359.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 188288.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:noedenisel/Rick-and-Morty.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/noedenisel/Rick-and-Morty"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/noedenisel/Rick-and-Morty/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2023-06-11T02:49:11Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/noedenisel/Rick-and-Morty"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/98433663?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/noedenisel/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/noedenisel/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/noedenisel/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/noedenisel/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/noedenisel"
+                    },
+                    {
+                      "k": "id",
+                      "v": 98433663.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "noedenisel"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBd36fw"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/noedenisel/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/noedenisel/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/noedenisel/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/noedenisel/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/noedenisel/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/noedenisel"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "noedenisel/Rick-and-Morty/.github/workflows/main.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "9b2abc13af85edcc49bf86f6a5772ff27769fd18"
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2023-06-12 22:52:47Z INFO JobRunner] Job ID ca395085-040a-526b-2ce8-bdc85f692774
+[2023-06-12 22:52:47Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN/
+[2023-06-12 22:52:47Z INFO ConfigurationStore] currentAssemblyLocation: /Users/noedenisel/Desktop/Rick-and-Morty/bin/Runner.Worker.dll
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] binPath: /Users/noedenisel/Desktop/Rick-and-Morty/bin
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] RootFolder: /Users/noedenisel/Desktop/Rick-and-Morty
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:47Z INFO HostContext] Well known config file 'Runner': '/Users/noedenisel/Desktop/Rick-and-Morty/.runner'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] ConfigFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.runner
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:47Z INFO HostContext] Well known config file 'Credentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] CredFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.credentials
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:47Z INFO HostContext] Well known config file 'MigratedCredentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials_migrated'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] MigratedCredFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_migrated
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:47Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:47Z INFO HostContext] Well known config file 'Service': '/Users/noedenisel/Desktop/Rick-and-Morty/.service'
+[2023-06-12 22:52:47Z INFO ConfigurationStore] ServiceConfigFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.service
+[2023-06-12 22:52:47Z INFO ConfigurationStore] Read setting file: 308 chars
+[2023-06-12 22:52:47Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-06-12 22:52:47Z INFO Worker] Listening for cancel message from the channel.
+[2023-06-12 22:52:47Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2023-06-12 22:52:48Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-06-12 22:52:48Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb/timelines/2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb/records/ca395085-040a-526b-2ce8-bdc85f692774/feedstream?api-version=6.0-preview
+[2023-06-12 22:52:48Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2023-06-12 22:52:48Z INFO JobServerQueue] Start process web console line queue.
+[2023-06-12 22:52:48Z INFO JobServerQueue] Start process file upload queue.
+[2023-06-12 22:52:48Z INFO JobServerQueue] Start results file upload queue.
+[2023-06-12 22:52:48Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-06-12 22:52:48Z INFO JobServerQueue] Start process timeline update queue.
+[2023-06-12 22:52:48Z INFO ExecutionContext] Initialize GitHub context
+[2023-06-12 22:52:48Z INFO ExecutionContext] Initialize Env context
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:52:48Z INFO JobRunner] Starting the job execution context.
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO JobRunner] Validating directory permissions for: '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Tools': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_tool'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Temp': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp'
+[2023-06-12 22:52:48Z INFO JobRunner] Getting job extension.
+[2023-06-12 22:52:48Z INFO JobRunner] Initialize job. Getting all job steps.
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known config file 'Credentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known config file 'SetupInfo': '/Users/noedenisel/Desktop/Rick-and-Morty/.setup_info'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO PipelineDirectoryManager] Loading tracking config if exists: /Users/noedenisel/Desktop/Rick-and-Morty/_work/_PipelineMapping/noedenisel/Rick-and-Morty/PipelineFolder.json
+[2023-06-12 22:52:48Z INFO PipelineDirectoryManager] Updating job run properties.
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:48Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:49Z INFO JobExtension] Downloading actions
+[2023-06-12 22:52:49Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:49Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:49Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:49Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:49Z INFO JobServer] Successfully started websocket client.
+[2023-06-12 22:52:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:52:50Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2023-06-12 22:52:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:51Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:51Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/ee0669bd1cc54295c223e0bb666b733df41de1c5' into /Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e6357590-c922-45ae-9f12-8a1405ee0ac8/20e3c7c8-0537-4bfb-8656-95129f360fdf.tar.gz.
+[2023-06-12 22:52:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:52:52Z INFO ActionManager] Which: 'tar'
+[2023-06-12 22:52:52Z INFO ActionManager] Location: '/usr/bin/tar'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e6357590-c922-45ae-9f12-8a1405ee0ac8/20e3c7c8-0537-4bfb-8656-95129f360fdf.tar.gz"'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e6357590-c922-45ae-9f12-8a1405ee0ac8/_staging'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper] Process started with process id 39451, waiting for process exit.
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:52:52Z INFO ProcessInvokerWrapper] Finished process 39451 with exit code 0, and elapsed time 00:00:00.0963457.
+[2023-06-12 22:52:52Z INFO ActionManager] Finished getting action repository.
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:52Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:52Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/tarball/7c12f8017d5436eb855f1ed4399f037a36fbd9e8' into /Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e635bea8-4de7-4a98-9fad-053556f6e89b/85652341-1287-4b68-9661-71f5f13b3a27.tar.gz.
+[2023-06-12 22:52:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:52:54Z INFO ActionManager] Which: 'tar'
+[2023-06-12 22:52:54Z INFO ActionManager] Location: '/usr/bin/tar'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e635bea8-4de7-4a98-9fad-053556f6e89b/85652341-1287-4b68-9661-71f5f13b3a27.tar.gz"'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_e635bea8-4de7-4a98-9fad-053556f6e89b/_staging'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper] Process started with process id 39457, waiting for process exit.
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:52:54Z INFO ProcessInvokerWrapper] Finished process 39457 with exit code 0, and elapsed time 00:00:00.1096552.
+[2023-06-12 22:52:54Z INFO ActionManager] Finished getting action repository.
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:52:54Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:52:54Z INFO ActionManager] Save archive 'https://api.github.com/repos/JamesIves/github-pages-deploy-action/tarball/132898c54c57c7cc6b80eb3a89968de8fc283505' into /Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_f7b1bc10-733e-4ffe-8fa0-28692b2616d7/8df4d592-a0f6-4800-8267-ff9ee9c27ea4.tar.gz.
+[2023-06-12 22:52:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:52:57Z INFO ActionManager] Which: 'tar'
+[2023-06-12 22:52:57Z INFO ActionManager] Location: '/usr/bin/tar'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_f7b1bc10-733e-4ffe-8fa0-28692b2616d7/8df4d592-a0f6-4800-8267-ff9ee9c27ea4.tar.gz"'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/_temp_f7b1bc10-733e-4ffe-8fa0-28692b2616d7/_staging'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:52:57Z INFO ProcessInvokerWrapper] Process started with process id 39488, waiting for process exit.
+[2023-06-12 22:53:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:06Z INFO ProcessInvokerWrapper] Finished process 39488 with exit code 0, and elapsed time 00:00:08.4218310.
+[2023-06-12 22:53:18Z INFO ActionManager] Finished getting action repository.
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:20Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:20Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManager] Load action that reference repository from '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/checkout/v2'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-06-12 22:53:21Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property author.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 31,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: dist/setup/index.js, no more preparation.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManager] Load action that reference repository from '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/setup-node/v2'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property author.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 31,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2023-06-12 22:53:21Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property author.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property branding.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Deploy to GitHub Pages",
+  "description": "This action will handle the deployment process of your project to GitHub Pages.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 11,
+          "col": 3,
+          "lit": "SSH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 15,
+          "col": 3,
+          "lit": "ACCESS_TOKEN"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 19,
+          "col": 3,
+          "lit": "GITHUB_TOKEN"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 23,
+          "col": 3,
+          "lit": "BRANCH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 27,
+          "col": 3,
+          "lit": "FOLDER"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 31,
+          "col": 3,
+          "lit": "TARGET_FOLDER"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 35,
+          "col": 3,
+          "lit": "BASE_BRANCH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 39,
+          "col": 3,
+          "lit": "COMMIT_MESSAGE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 43,
+          "col": 3,
+          "lit": "CLEAN"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 46,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 48,
+          "col": 3,
+          "lit": "CLEAN_EXCLUDE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 52,
+          "col": 3,
+          "lit": "GIT_CONFIG_NAME"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 56,
+          "col": 3,
+          "lit": "GIT_CONFIG_EMAIL"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 60,
+          "col": 3,
+          "lit": "REPOSITORY_NAME"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 64,
+          "col": 3,
+          "lit": "WORKSPACE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 68,
+          "col": 3,
+          "lit": "SINGLE_COMMIT"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 72,
+          "col": 3,
+          "lit": "LFS"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 76,
+          "col": 3,
+          "lit": "SILENT"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 80,
+          "col": 3,
+          "lit": "PRESERVE"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "lib/main.js",
+    "pre": null,
+    "post": null,
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: lib/main.js, no more preparation.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManager] Load action that reference repository from '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/JamesIves/github-pages-deploy-action/3.7.1'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property author.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Ignore action property branding.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Deploy to GitHub Pages",
+  "description": "This action will handle the deployment process of your project to GitHub Pages.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 11,
+          "col": 3,
+          "lit": "SSH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 15,
+          "col": 3,
+          "lit": "ACCESS_TOKEN"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 19,
+          "col": 3,
+          "lit": "GITHUB_TOKEN"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 23,
+          "col": 3,
+          "lit": "BRANCH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 27,
+          "col": 3,
+          "lit": "FOLDER"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 31,
+          "col": 3,
+          "lit": "TARGET_FOLDER"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 35,
+          "col": 3,
+          "lit": "BASE_BRANCH"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 39,
+          "col": 3,
+          "lit": "COMMIT_MESSAGE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 43,
+          "col": 3,
+          "lit": "CLEAN"
+        },
+        "value": {
+          "type": 0,
+          "file": 4,
+          "line": 46,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 48,
+          "col": 3,
+          "lit": "CLEAN_EXCLUDE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 52,
+          "col": 3,
+          "lit": "GIT_CONFIG_NAME"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 56,
+          "col": 3,
+          "lit": "GIT_CONFIG_EMAIL"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 60,
+          "col": 3,
+          "lit": "REPOSITORY_NAME"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 64,
+          "col": 3,
+          "lit": "WORKSPACE"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 68,
+          "col": 3,
+          "lit": "SINGLE_COMMIT"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 72,
+          "col": 3,
+          "lit": "LFS"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 76,
+          "col": 3,
+          "lit": "SILENT"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 4,
+          "line": 80,
+          "col": 3,
+          "lit": "PRESERVE"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "lib/main.js",
+    "pre": null,
+    "post": null,
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: lib/main.js.
+[2023-06-12 22:53:21Z INFO ActionManager] Action post node.js file: N/A.
+[2023-06-12 22:53:21Z INFO JobExtension] Adding .
+[2023-06-12 22:53:21Z INFO JobExtension] Adding .
+[2023-06-12 22:53:21Z INFO JobExtension] Adding .
+[2023-06-12 22:53:21Z INFO JobExtension] Adding .
+[2023-06-12 22:53:21Z INFO JobExtension] Adding .
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO JobExtension] Total accessible running process: 244.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "83d74f99-258e-49a2-b239-a5ae12eee282",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 33,
+  "startTime": "2023-06-12T22:52:48.854486Z",
+  "finishTime": "2023-06-12T22:53:21.200837Z"
+}.
+[2023-06-12 22:53:21Z INFO JobRunner] Total job steps: 5.
+[2023-06-12 22:53:21Z INFO JobRunner] Run all job steps.
+[2023-06-12 22:53:21Z INFO StepsRunner] Processing step: DisplayName='Checkout code'
+[2023-06-12 22:53:21Z INFO StepsRunner] Evaluating: success()
+[2023-06-12 22:53:21Z INFO StepsRunner] Result: true
+[2023-06-12 22:53:21Z INFO StepsRunner] Starting the step.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO ActionManager] Load action that reference repository from '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/checkout/v2'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '83d74f99-258e-49a2-b239-a5ae12eee282', success rate: 1/1.
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:21Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-06-12 22:53:21Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-06-12 22:53:21Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-06-12 22:53:21Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Temp': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp'
+[2023-06-12 22:53:21Z INFO ExecutionContext] Write event payload to /Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp/_github_workflow/event.json
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Temp': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp'
+[2023-06-12 22:53:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "noedenisel/Rick-and-Morty"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-06-12 22:53:21Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:21Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command error
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command group
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-06-12 22:53:21Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO HostContext] Well known directory 'Externals': '/Users/noedenisel/Desktop/Rick-and-Morty/externals'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   File name: '/Users/noedenisel/Desktop/Rick-and-Morty/externals/node12/bin/node'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Arguments: '"/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/checkout/v2/dist/index.js"'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/_work/Rick-and-Morty/Rick-and-Morty'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:21Z INFO ProcessInvokerWrapper] Process started with process id 39617, waiting for process exit.
+[2023-06-12 22:53:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:21Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2023-06-12 22:53:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:21Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-06-12 22:53:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:22Z INFO ProcessInvokerWrapper] Finished process 39617 with exit code 1, and elapsed time 00:00:01.5546020.
+[2023-06-12 22:53:22Z INFO CreateStepSummaryCommand] Step Summary file (/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp/_runner_file_commands/step_summary_267e801a-0c30-41f8-b750-2b7b4a9ddadc) is empty; skipping attachment upload
+[2023-06-12 22:53:22Z INFO StepsRunner] Step result: Failed
+[2023-06-12 22:53:22Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Main",
+  "stepId": "a60052d4-79a0-5821-3eeb-84adb9872c5b",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "failed",
+  "errorMessages": [
+    "No url found for submodule path 'actions-runner/_work/Rick-and-Morty/Rick-and-Morty' in .gitmodules",
+    "The process '/usr/local/bin/git' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 2,
+  "startTime": "2023-06-12T22:53:21.235474Z",
+  "finishTime": "2023-06-12T22:53:22.994324Z"
+}.
+[2023-06-12 22:53:22Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2023-06-12 22:53:22Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:22Z INFO StepsRunner] Processing step: DisplayName='Set up Node.js'
+[2023-06-12 22:53:23Z INFO StepsRunner] Evaluating: success()
+[2023-06-12 22:53:23Z INFO StepsRunner] Result: false
+[2023-06-12 22:53:23Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-06-12 22:53:23Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-06-12 22:53:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:23Z INFO StepsRunner] Processing step: DisplayName='Install dependencies'
+[2023-06-12 22:53:23Z INFO StepsRunner] Evaluating: success()
+[2023-06-12 22:53:23Z INFO StepsRunner] Result: false
+[2023-06-12 22:53:23Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-06-12 22:53:23Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-06-12 22:53:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:23Z INFO StepsRunner] Processing step: DisplayName='Build'
+[2023-06-12 22:53:23Z INFO StepsRunner] Evaluating: success()
+[2023-06-12 22:53:23Z INFO StepsRunner] Result: false
+[2023-06-12 22:53:23Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-06-12 22:53:23Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-06-12 22:53:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:23Z INFO StepsRunner] Processing step: DisplayName='Deploy to GitHub Pages'
+[2023-06-12 22:53:23Z INFO StepsRunner] Evaluating: success()
+[2023-06-12 22:53:23Z INFO StepsRunner] Result: false
+[2023-06-12 22:53:23Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-06-12 22:53:23Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-06-12 22:53:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:23Z INFO StepsRunner] Processing step: DisplayName='Post Checkout code'
+[2023-06-12 22:53:23Z INFO StepsRunner] Evaluating: always()
+[2023-06-12 22:53:23Z INFO StepsRunner] Result: true
+[2023-06-12 22:53:23Z INFO StepsRunner] Starting the step.
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:23Z INFO ActionManager] Load action that reference repository from '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/checkout/v2'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Actions': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions'
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node12",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-06-12 22:53:23Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-06-12 22:53:23Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-06-12 22:53:23Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Temp': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp'
+[2023-06-12 22:53:23Z INFO ExecutionContext] Write event payload to /Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp/_github_workflow/event.json
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Work': '/Users/noedenisel/Desktop/Rick-and-Morty/_work'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Temp': '/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp'
+[2023-06-12 22:53:23Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "noedenisel/Rick-and-Morty"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-06-12 22:53:23Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2023-06-12 22:53:23Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command error
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command group
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-06-12 22:53:23Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Externals': '/Users/noedenisel/Desktop/Rick-and-Morty/externals'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: '/Users/noedenisel/Desktop/Rick-and-Morty/externals/node12/bin/node'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: '"/Users/noedenisel/Desktop/Rick-and-Morty/_work/_actions/actions/checkout/v2/dist/index.js"'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/_work/Rick-and-Morty/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39670, waiting for process exit.
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'a60052d4-79a0-5821-3eeb-84adb9872c5b', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '603cd0a2-44ad-4131-acf2-defa554d3bda', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '603cd0a2-44ad-4131-acf2-defa554d3bda', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '603cd0a2-44ad-4131-acf2-defa554d3bda', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39670 with exit code 0, and elapsed time 00:00:00.5960655.
+[2023-06-12 22:53:23Z INFO CreateStepSummaryCommand] Step Summary file (/Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp/_runner_file_commands/step_summary_a582ca37-916b-436d-a6ed-7e3c5ff771f5) is empty; skipping attachment upload
+[2023-06-12 22:53:23Z INFO StepsRunner] Step result: 
+[2023-06-12 22:53:23Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v2",
+  "type": "node12",
+  "stage": "Post",
+  "stepId": "603cd0a2-44ad-4131-acf2-defa554d3bda",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process '/usr/local/bin/git' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-06-12T22:53:23.008679Z",
+  "finishTime": "2023-06-12T22:53:23.637386Z"
+}.
+[2023-06-12 22:53:23Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-06-12 22:53:23Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-06-12 22:53:23Z INFO JobRunner] Finalize job.
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:23Z INFO JobExtension] Initialize Env context
+[2023-06-12 22:53:23Z INFO JobExtension] Initialize steps context
+[2023-06-12 22:53:23Z INFO JobExtension] Total accessible running process: 243.
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39678 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39678 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39678 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39712, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39712 with exit code 0, and elapsed time 00:00:00.0399372.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39678
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39674 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39674 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39674 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39713, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39713 with exit code 0, and elapsed time 00:00:00.0316791.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39674
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39672 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39672 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39672 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39714, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39714 with exit code 0, and elapsed time 00:00:00.0333842.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39672
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39669 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39669 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39669 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39715, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39715 with exit code 0, and elapsed time 00:00:00.0372988.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39669
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39632 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39632 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39632 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39716, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39716 with exit code 0, and elapsed time 00:00:00.0349074.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39632
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39631 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39631 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39631 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '603cd0a2-44ad-4131-acf2-defa554d3bda', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7cb9ef7b-66ad-4933-abbc-bfdaf76e2d23', success rate: 1/1.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39717, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39717 with exit code 0, and elapsed time 00:00:00.0263037.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39631
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39630 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39630 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39630 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39718, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39718 with exit code 0, and elapsed time 00:00:00.0252039.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39630
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39626 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39626 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39626 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39719, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39719 with exit code 0, and elapsed time 00:00:00.0252295.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39626
+[2023-06-12 22:53:23Z INFO JobExtension] Inspecting process environment variables. PID: 39618 (mdworker_shared)
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 39618 -o command`
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:23Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 39618 -o command'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Process started with process id 39720, waiting for process exit.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:23Z INFO ProcessInvokerWrapper] Finished process 39720 with exit code 0, and elapsed time 00:00:00.0240093.
+[2023-06-12 22:53:23Z INFO LinuxProcessExtensions] Successfully dump environment variables for 39618
+[2023-06-12 22:53:23Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "7cb9ef7b-66ad-4933-abbc-bfdaf76e2d23",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-06-12T22:53:23.655537Z",
+  "finishTime": "2023-06-12T22:53:23.986545Z"
+}.
+[2023-06-12 22:53:23Z INFO JobRunner] Job result after all job steps finish: Failed
+[2023-06-12 22:53:23Z INFO JobRunner] Completing the job execution context.
+[2023-06-12 22:53:24Z INFO JobRunner] Shutting down the job server queue.
+[2023-06-12 22:53:24Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-06-12 22:53:24Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-06-12 22:53:25Z INFO JobServerQueue] All queue process task stopped.
+[2023-06-12 22:53:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ca395085-040a-526b-2ce8-bdc85f692774', success rate: 1/1.
+[2023-06-12 22:53:25Z INFO JobServerQueue] Web console line queue drained.
+[2023-06-12 22:53:25Z INFO JobServerQueue] Uploading 2 files in one shot.
+[2023-06-12 22:53:26Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-06-12 22:53:26Z INFO JobServerQueue] File upload queue drained.
+[2023-06-12 22:53:26Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-06-12 22:53:26Z INFO JobServerQueue] Results upload queue drained.
+[2023-06-12 22:53:26Z INFO JobServerQueue] Timeline update queue drained.
+[2023-06-12 22:53:26Z INFO JobServerQueue] Disposing job server ...
+[2023-06-12 22:53:26Z INFO JobServerQueue] Disposing results server ...
+[2023-06-12 22:53:26Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-06-12 22:53:26Z INFO TempDirectoryManager] Cleaning runner temp folder: /Users/noedenisel/Desktop/Rick-and-Morty/_work/_temp
+[2023-06-12 22:53:26Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:53:26Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:53:26Z INFO HostContext] Well known directory 'Diag': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag'
+[2023-06-12 22:53:26Z INFO HostContext] Well known config file 'Telemetry': '/Users/noedenisel/Desktop/Rick-and-Morty/_diag/.telemetry'
+[2023-06-12 22:53:26Z INFO JobRunner] Raising job completed event
+[2023-06-12 22:53:26Z INFO Worker] Job completed.

@@ -20,6 +20,7 @@ function App () {
     //   characters == []
     //                 setCharacters funcion que actualilza el estado
 
+    const [setAccess] = useState(false);
     
     const username = 'noelialombardo@hotmail.com';
     const password = '123456p';

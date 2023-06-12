@@ -224,3 +224,39 @@
 [2023-06-12 22:50:40Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 38.
 [2023-06-12 22:50:40Z INFO JobNotification] Entering JobCompleted Notification
 [2023-06-12 22:50:40Z INFO JobNotification] Entering EndMonitor
+[2023-06-12 22:52:45Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams
+[2023-06-12 22:52:45Z INFO MessageListener] Message '4' received from session 'ba475c4e-9e04-4856-a5b5-34c9ffd66866'.
+[2023-06-12 22:52:45Z INFO Runner] Received job message of length 22485 from service, with hash 'dce9ee5c59446efa978aad57f6272ef7a78ad8107198e57b30efb5a1c68f88d4'
+[2023-06-12 22:52:45Z INFO JobDispatcher] Job request 39 for plan 2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2023-06-12 22:52:45Z INFO JobDispatcher] Pull OrchestrationId 2cdbc1a9-e7e8-4793-b0ae-bf1cf2c43ebb.build.__default from JWT claims
+[2023-06-12 22:52:45Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2023-06-12 22:52:45Z INFO Terminal] WRITE LINE: 2023-06-12 22:52:45Z: Running job: build
+[2023-06-12 22:52:45Z INFO JobDispatcher] Start renew job request 39 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:52:45Z INFO JobDispatcher] Successfully renew job request 39, job is valid till 6/12/2023 11:02:45 PM
+[2023-06-12 22:52:45Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   File name: '/Users/noedenisel/Desktop/Rick-and-Morty/bin/Runner.Worker'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 101 113'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-06-12 22:52:45Z INFO ProcessInvokerWrapper] Process started with process id 39382, waiting for process exit.
+[2023-06-12 22:52:45Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:52:45Z INFO ProcessChannel] Sending message of length 22485, with hash 'dce9ee5c59446efa978aad57f6272ef7a78ad8107198e57b30efb5a1c68f88d4'
+[2023-06-12 22:52:45Z INFO JobNotification] Entering JobStarted Notification
+[2023-06-12 22:52:45Z INFO JobNotification] Entering StartMonitor
+[2023-06-12 22:53:26Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:26Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:53:26Z INFO ProcessInvokerWrapper] Finished process 39382 with exit code 102, and elapsed time 00:00:41.1468721.
+[2023-06-12 22:53:26Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2023-06-12 22:53:26Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2023-06-12 22:53:26Z INFO Terminal] WRITE LINE: 2023-06-12 22:53:26Z: Job build completed with result: Failed
+[2023-06-12 22:53:26Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:53:26Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 39.
+[2023-06-12 22:53:26Z INFO JobNotification] Entering JobCompleted Notification
+[2023-06-12 22:53:26Z INFO JobNotification] Entering EndMonitor
