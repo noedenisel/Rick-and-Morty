@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "noedenisel/Rick-and-Morty",
+  "pipelineDirectory": "Rick-and-Morty",
+  "workspaceDirectory": "Rick-and-Morty/Rick-and-Morty",
+  "repositories": {
+    "noedenisel/Rick-and-Morty": {
+      "repositoryPath": "Rick-and-Morty/Rick-and-Morty",
+      "lastRunOn": "06/12/2023 19:39:16 -03:00"
+    }
+  },
+  "lastRunOn": "06/12/2023 19:39:16 -03:00"
+}

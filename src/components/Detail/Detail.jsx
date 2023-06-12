@@ -47,7 +47,7 @@ useEffect(() => {
       
 
             <div>
-               <img src={character.image}></img>
+               <img src={character.image} alt="character img"></img>
             </div>
          </div>
 

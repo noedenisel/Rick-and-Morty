@@ -115,3 +115,40 @@
 [2023-06-12 22:38:16Z INFO Terminal] WRITE LINE: Current runner version: '2.304.0'
 [2023-06-12 22:38:16Z INFO Terminal] WRITE LINE: 2023-06-12 22:38:16Z: Listening for Jobs
 [2023-06-12 22:38:16Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2023-06-12 22:39:11Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams
+[2023-06-12 22:39:11Z INFO MessageListener] Message '1' received from session 'ba475c4e-9e04-4856-a5b5-34c9ffd66866'.
+[2023-06-12 22:39:11Z INFO Runner] Received job message of length 23793 from service, with hash '7c29c45fba00998906662d471913590835ea7b2a79819e19c5568d2c983bec7f'
+[2023-06-12 22:39:11Z INFO JobDispatcher] Job request 32 for plan 7ca76d77-219a-47d0-a287-a0c3d730a709 job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2023-06-12 22:39:11Z INFO JobDispatcher] Pull OrchestrationId 7ca76d77-219a-47d0-a287-a0c3d730a709.build.__default from JWT claims
+[2023-06-12 22:39:12Z INFO Terminal] WRITE LINE: 2023-06-12 22:39:12Z: Running job: build
+[2023-06-12 22:39:12Z INFO JobDispatcher] Start renew job request 32 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:39:12Z INFO JobDispatcher] Successfully renew job request 32, job is valid till 6/12/2023 10:49:12 PM
+[2023-06-12 22:39:12Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper] Starting process:
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   File name: '/Users/noedenisel/Desktop/Rick-and-Morty/bin/Runner.Worker'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 107 110'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Working directory: '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-06-12 22:39:12Z INFO ProcessInvokerWrapper] Process started with process id 34991, waiting for process exit.
+[2023-06-12 22:39:12Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:39:12Z INFO ProcessChannel] Sending message of length 23793, with hash '7c29c45fba00998906662d471913590835ea7b2a79819e19c5568d2c983bec7f'
+[2023-06-12 22:39:12Z INFO JobNotification] Entering JobStarted Notification
+[2023-06-12 22:39:12Z INFO JobNotification] Entering StartMonitor
+[2023-06-12 22:40:13Z INFO JobDispatcher] Successfully renew job request 32, job is valid till 6/12/2023 10:50:12 PM
+[2023-06-12 22:41:13Z INFO JobDispatcher] Successfully renew job request 32, job is valid till 6/12/2023 10:51:13 PM
+[2023-06-12 22:41:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:41:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-06-12 22:41:22Z INFO ProcessInvokerWrapper] Finished process 34991 with exit code 102, and elapsed time 00:02:09.8563179.
+[2023-06-12 22:41:22Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2023-06-12 22:41:22Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2023-06-12 22:41:22Z INFO Terminal] WRITE LINE: 2023-06-12 22:41:22Z: Job build completed with result: Failed
+[2023-06-12 22:41:22Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2023-06-12 22:41:22Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 32.
+[2023-06-12 22:41:22Z INFO JobNotification] Entering JobCompleted Notification
+[2023-06-12 22:41:22Z INFO JobNotification] Entering EndMonitor

@@ -4,7 +4,7 @@ export default function Form(props) {
   
     return(
 <div className={sytles.notfund}>
-   <img src="https://retouchcenter.org/wp-content/uploads/2019/04/error-4044-277x300.jpg"></img>
+   <img src="https://retouchcenter.org/wp-content/uploads/2019/04/error-4044-277x300.jpg" alt='404 not found'></img>
 
 
 </div> 

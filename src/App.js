@@ -1,7 +1,7 @@
 //React
 import React, {useState} from "react"
 import { Route, Routes , useLocation, useNavigate, Navigate} from "react-router-dom"
-import { useEffect } from "react"
+
 
 //Componentes
 import './App.css'
@@ -20,7 +20,6 @@ function App () {
     //   characters == []
     //                 setCharacters funcion que actualilza el estado
 
-    const [access, setAccess] = useState(false);
     
     const username = 'noelialombardo@hotmail.com';
     const password = '123456p';
