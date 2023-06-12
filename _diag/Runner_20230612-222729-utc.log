@@ -1,0 +1,117 @@
+[2023-06-12 22:27:29Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-06-12 22:27:29Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:29Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:29Z INFO HostContext] Well known config file 'Credentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'Runner': '/Users/noedenisel/Desktop/Rick-and-Morty/.runner'
+[2023-06-12 22:27:30Z INFO Listener] Runner is built for OSX (X64) - osx-x64.
+[2023-06-12 22:27:30Z INFO Listener] RuntimeInformation: Darwin 22.5.0 Darwin Kernel Version 22.5.0: Mon Apr 24 20:52:43 PDT 2023; root:xnu-8796.121.2~5/RELEASE_ARM64_T8112.
+[2023-06-12 22:27:30Z INFO Listener] Version: 2.304.0
+[2023-06-12 22:27:30Z INFO Listener] Commit: 9ef4121b5b31ee5c03b7770288213d741081f747
+[2023-06-12 22:27:30Z INFO Listener] Culture: en-US
+[2023-06-12 22:27:30Z INFO Listener] UI Culture: en-US
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO Listener] Validating directory permissions for: '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO CommandLineParser] Parse
+[2023-06-12 22:27:30Z INFO CommandLineParser] Parsing 1 args
+[2023-06-12 22:27:30Z INFO CommandLineParser] parsing argument
+[2023-06-12 22:27:30Z INFO CommandLineParser] HasArgs: False
+[2023-06-12 22:27:30Z INFO CommandLineParser] Adding Command: run
+[2023-06-12 22:27:30Z INFO Listener] Arguments parsed
+[2023-06-12 22:27:30Z INFO Runner] ExecuteCommand
+[2023-06-12 22:27:30Z INFO ConfigurationStore] currentAssemblyLocation: /Users/noedenisel/Desktop/Rick-and-Morty/bin/Runner.Listener.dll
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] binPath: /Users/noedenisel/Desktop/Rick-and-Morty/bin
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] RootFolder: /Users/noedenisel/Desktop/Rick-and-Morty
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'Runner': '/Users/noedenisel/Desktop/Rick-and-Morty/.runner'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] ConfigFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.runner
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'Credentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] CredFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.credentials
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'MigratedCredentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials_migrated'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] MigratedCredFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_migrated
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'Service': '/Users/noedenisel/Desktop/Rick-and-Morty/.service'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] ServiceConfigFilePath: /Users/noedenisel/Desktop/Rick-and-Morty/.service
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'help': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'version': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'check': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Command 'configure': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Command 'remove': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Command 'warmup': 'False'
+[2023-06-12 22:27:30Z INFO ConfigurationManager] LoadSettings
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured()
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-06-12 22:27:30Z INFO ConfigurationManager] Is configured: True
+[2023-06-12 22:27:30Z INFO ConfigurationStore] Read setting file: 308 chars
+[2023-06-12 22:27:30Z INFO ConfigurationManager] Settings Loaded
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-06-12 22:27:30Z INFO CommandSettings] Command 'run': 'True'
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured()
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-06-12 22:27:30Z INFO ConfigurationManager] Is configured: True
+[2023-06-12 22:27:30Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2023-06-12 22:27:30Z INFO Runner] Set runner startup type - Manual
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'once': 'False'
+[2023-06-12 22:27:30Z INFO CommandSettings] Flag 'once': 'False'
+[2023-06-12 22:27:30Z INFO Runner] RunAsync
+[2023-06-12 22:27:30Z INFO ConfigurationManager] LoadSettings
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured()
+[2023-06-12 22:27:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-06-12 22:27:30Z INFO ConfigurationManager] Is configured: True
+[2023-06-12 22:27:30Z INFO ConfigurationManager] Settings Loaded
+[2023-06-12 22:27:30Z INFO MessageListener] {
+  "AgentId": 23,
+  "AgentName": "MacBook-Pro-de-Noe-Denise",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/JIWdNYb9N6pLJtAc6QwtYjbzoEYbQ8eRKU1u6BSVp0Ic1UkUzN",
+  "GitHubUrl": "https://github.com/noedenisel/Rick-and-Morty",
+  "WorkFolder": "_work"
+}
+[2023-06-12 22:27:30Z INFO MessageListener] Loading Credentials
+[2023-06-12 22:27:30Z INFO ConfigurationStore] HasCredentials()
+[2023-06-12 22:27:30Z INFO ConfigurationStore] stored True
+[2023-06-12 22:27:30Z INFO CredentialManager] GetCredentialProvider
+[2023-06-12 22:27:30Z INFO CredentialManager] Creating type OAuth
+[2023-06-12 22:27:30Z INFO CredentialManager] Creating credential type: OAuth
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Bin': '/Users/noedenisel/Desktop/Rick-and-Morty/bin'
+[2023-06-12 22:27:30Z INFO HostContext] Well known directory 'Root': '/Users/noedenisel/Desktop/Rick-and-Morty'
+[2023-06-12 22:27:30Z INFO HostContext] Well known config file 'RSACredentials': '/Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams'
+[2023-06-12 22:27:30Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams
+[2023-06-12 22:27:30Z INFO MessageListener] Attempt to create session.
+[2023-06-12 22:27:30Z INFO MessageListener] Connecting to the Runner Server...
+[2023-06-12 22:27:30Z INFO RunnerServer] EstablishVssConnection
+[2023-06-12 22:27:30Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-06-12 22:27:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-06-12 22:27:31Z INFO RunnerServer] EstablishVssConnection
+[2023-06-12 22:27:31Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-06-12 22:27:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-06-12 22:27:31Z INFO RunnerServer] EstablishVssConnection
+[2023-06-12 22:27:31Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-06-12 22:27:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-06-12 22:27:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-06-12 22:27:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-06-12 22:27:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-06-12 22:27:32Z INFO MessageListener] VssConnection created
+[2023-06-12 22:27:32Z INFO Terminal] WRITE LINE: 
+[2023-06-12 22:27:32Z INFO Terminal] WRITE LINE: 
+[2023-06-12 22:27:33Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams
+[2023-06-12 22:27:33Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/noedenisel/Desktop/Rick-and-Morty/.credentials_rsaparams
+[2023-06-12 22:27:33Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2023-06-12 22:27:34Z INFO MessageListener] Session created.
+[2023-06-12 22:27:34Z INFO Terminal] WRITE LINE: Current runner version: '2.304.0'
+[2023-06-12 22:27:34Z INFO Terminal] WRITE LINE: 2023-06-12 22:27:34Z: Listening for Jobs
+[2023-06-12 22:27:34Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
