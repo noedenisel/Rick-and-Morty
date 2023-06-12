@@ -7,8 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Otra opción puede ser 'self-hosted' si deseas utilizar tus propios recursos para la implementación
-
+    runs-on: self-hosted
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
