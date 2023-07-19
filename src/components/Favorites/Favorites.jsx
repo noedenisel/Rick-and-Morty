@@ -25,6 +25,10 @@ export function Favorites({myFavorites, onClose}){
             ))
             }
         </div>
+
+         <div className={styles.buttonBack}>
+         <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
+      </div>
     )
 }
 
