@@ -1,5 +1,7 @@
 
 import { connect } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import styles from "../Detail/Detail.module.css"
 
 import  Card  from "../Card/Card";
 
@@ -8,7 +10,7 @@ import  Card  from "../Card/Card";
 
 export function Favorites({myFavorites, onClose}){
 
-
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -20,15 +22,17 @@ export function Favorites({myFavorites, onClose}){
                 gender={character.gender} 
                 image={character.image} 
                 onClose= {() => onClose(character.id)}
-                >
+                >   
                 </Card>
             ))
             }
+            
+            <div className={styles.buttonBack}>
+                <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
+            </div>
         </div>
 
-         <div className={styles.buttonBack}>
-         <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
-      </div>
+         
     )
 }
 

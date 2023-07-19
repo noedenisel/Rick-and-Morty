@@ -6,9 +6,7 @@ export default function Cards({characters, onClose}) {
 
 
      return (
-    <div 
-   
-   >
+    <div>
       {
        characters.map(character => (
        <Card 

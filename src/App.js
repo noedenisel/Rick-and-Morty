@@ -28,9 +28,9 @@ function App () {
     const location = useLocation()
     const navigate = useNavigate();
 
-      useEffect(() => {
-      !access && navigate('/');
-       }, [access]);
+      // useEffect(() => {
+      // !access && navigate('/');
+      //  }, [access]);
       
       function login(userData) {
         if (userData.password === password && userData.username === username) {
@@ -80,13 +80,13 @@ function App () {
 <Routes>    
  
 
-  <Route  exact path="/" element = {<Form login={login} />} ></Route>   
-  <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} ></Route>  
-  <Route  path="/About" element = {<About/>}></Route>
-  <Route  path="/detail/:id" element = {<Detail/>}></Route>
-  <Route  path="/favorites" element = {<Favorites/>}></Route>
-  <Route path ="/Error404" element = {<Error404/>}></Route>
-  <Route path= "*" element={<Navigate to ="/Error404" />}></Route>
+  {/* <Route  exact path="/" element = {<Form login={login} />}/ >    */}
+  <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
+  <Route  path="/About" element = {<About/>}/>
+  <Route  path="/detail/:id" element = {<Detail/>}/>
+  <Route  path="/favorites" element = {<Favorites onClose={onClose}/> }/>  
+  <Route path ="/Error404" element = {<Error404/>}/>
+  <Route path= "*" element={<Navigate to ="/Error404" />}/>
   
   
  

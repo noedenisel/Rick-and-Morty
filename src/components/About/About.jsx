@@ -28,9 +28,10 @@ export default function About(){
                 <div className={styles.cardAbout}>
                     <h3 className={styles.h3}>Front End Skills</h3>
                     <p> Dentro de mi perfil Front End, me especializo en el desarrollo UI</p>
-                    <p><i class="fa-brands fa-html5"></i> Maquetación. Aplicación de etiquetas, atributos y enlaces. Creación de listas, tablas y formularios. API's: Canvas, Geolocalización, Web Storage. IndexDB, Web sockets, Web worker, WebGL, Drag and Drop. </p>
-                    <p><i class="fa-brands fa-css3-alt"></i> Manejo de selectores, utilización de paleta de colores. Posicionamiento, box model, CCS Grid y Flexbox. Responsive design. </p>
-                    <p><i class="fa-brands fa-js-square"></i> Sintaxis básica. Tipo de datos. Estructuras de control, funciones y procedimientos. POO. Pilas y Colas, listas. Coleciones: conjuntos, mapas y tablas hash. BOM. DOM. Eventos. </p>
+                    <p><i class="fa-brands fa-html5"></i> <strong>HTML</strong> Maquetación. Aplicación de etiquetas, atributos y enlaces. Creación de listas, tablas y formularios. API's: Canvas, Geolocalización, Web Storage. IndexDB, Web sockets, Web worker, WebGL, Drag and Drop. </p>
+                    <p><i class="fa-brands fa-css3-alt"></i> <strong>CSS</strong> Manejo de selectores, utilización de paleta de colores. Posicionamiento, box model, CCS Grid y Flexbox. Responsive design. </p>
+                    <p><i class="fa-brands fa-js-square"></i> <strong>JS</strong> JavaScript Avanzado.  Tipo de datos. Estructuras de control, funciones y procedimientos. POO. Pilas y Colas, listas. Coleciones: conjuntos, mapas y tablas hash. BOM. DOM. Eventos. Estructura de datos. Algoritmos</p>
+                    {/* //TODO Arreglar */}
                     <p><strong>TS</strong> Variables y tipos de datos. Funciones. POO. Abstracción, encapsulamiento, herencia. Polimorfismo, Modularidad.</p>
                     <p><strong>JSON</strong> Tipo de datos. </p>
                 </div>
@@ -39,31 +40,57 @@ export default function About(){
                 
                 <div className={styles.cardAbout}>     
                     <h3 className={styles.h3}> BackEnd Skills</h3>  
-                    <p>Nociones de NODE Js</p>
+                    <p> Node Js - Promises - Web Server - Advance Promises - Express - Testing</p>
+                </div>
+
+                <br />
+
+                <div className={styles.cardAbout}>     
+                    <h3 className={styles.h3}> DataBase</h3>  
+                    <p> PostreSQL | SQL: ORM - Autenticación</p>
                 </div>
 
                 <br />
                 
+                <div className={styles.cardAbout}>     
+                    <h3 className={styles.h3}> Control de Versiones</h3>  
+                    <p>GIT | GITHUB</p>
+                </div>
+
+                <br />
                 <div className={styles.cardAbout}>      
                     <h3 className={styles.h3}> Frameworks </h3>  
-                    <p><i class="fa-brands fa-angular"></i> Listas, Formularios, Observables, NGModules, Dependency Injection, Routing y navegación, Consumo de Apis. Angular Material</p>
-                {/**agregar boostrap
-                 * agregar react
-                 * agregar redux
-                 */}
+                    <p><i class="fa-brands fa-angular"></i> <strong>ANGULAR</strong> </p>
+                    {/* Listas, Formularios, Observables, NGModules, Dependency Injection, Routing y navegación, Consumo de Apis. Angular Material */}
+                    <p><i class="fa-brands fa-react"></i> <strong>REACT</strong></p>  
+                    <p> <strong>BOOSTRAP</strong></p>  
+                    <p><strong>ANGULAR MATERIAL</strong></p>  
                 </div>
 
                 <br />
                 
                 <div className={styles.cardAbout}>
-                    <h3 className={styles.h3}>Formación Full Stack Developer</h3>
-                    <p><strong>Henry</strong></p>
-                    <p> Actualmente me encuentro cursando el M2 en la academia Soy Henry para aprehender nuevos lenguajes a fin de mejorar mi formación en Desarrollo Web Full stack.
-                        Ruta de aprendizaje: </p>
-                    <p>
+                <h3 className={styles.h3}>Especialización FrontEnd</h3>
+                    <p><strong>Alura</strong></p>
+                    <p> Actualmente me encuentro cursando la especialización FrontEnd en Alura. </p>
+                    {/* <p> Ruta de aprendizaje:
                     <strong>M1:</strong>Aprobado. En él vimos introduccioón a CSS - JavaScript Avanzado I y II - Estructura de datos I, II y III - Algoritmos I y II
                     <br />
                     <strong>M2 FrontEnd:</strong>Enn curso. Dom Avanzado -  CSS avanzado - ES6 selectores - AJAX - Módulos y Bundlers - React - Redux 
+                    <br/>
+                    <strong>M3 BackEnd: </strong>Node Js - Promises - Web Server - Advance Promises - Express - Testing
+                    <br />
+                    <strong>M4 Base de Datos:</strong>DBMS - SQL - ORM - Autenticación </p> */}
+                    
+                    <br />
+
+                    <h3 className={styles.h3}>Formación Full Stack Developer</h3>
+                    <p><strong>Henry</strong></p>
+                    <p> Egresé en mayo de 2023 del Bootcamp Soy Henry. Esta app, Rick & Morty, fue elegida por mis compañeros de cohorte como una de las mejores por su UI/UX.</p>
+                    <p>
+                    <strong>M1:</strong>Introduccioón a CSS - JavaScript Avanzado I y II - Estructura de datos I, II y III - Algoritmos I y II
+                    <br />
+                    <strong>M2 FrontEnd:</strong> Dom Avanzado -  CSS avanzado - ES6 selectores - AJAX - Módulos y Bundlers - React - Redux 
                     <br/>
                     <strong>M3 BackEnd: </strong>Node Js - Promises - Web Server - Advance Promises - Express - Testing
                     <br />
@@ -86,17 +113,18 @@ export default function About(){
                     <p> <strong>Desarrollo de aplicaciones Tizen para SmartTV</strong> </p>
                     <p>Formación de Samsung Dev Spain e impartido por la platforma BeJob del grupo Santillana. Marzo 2022</p>
                     
-                    <p><strong>Bootcamps</strong></p>
+                    <p><strong>Otras formaciones</strong></p>
                     <p>Participé de la primer edición del Women's Coding Day de Le Wagon en Argentina.</p>
+                    
                 </div>
 
                 <br />
             
                 <div className={styles.cardAbout}>   
                     <h3 className={styles.h3}> More about me </h3>  
-                    <p> Soy mamá de una niña de 10 años con quién tengo la virtud de compartir muchas de mis pasiones, y que me desafía a mantenerme en constante movimiento y aprendizaje.
+                    <p> Soy mamá de una niña con quién tengo la virtud de compartir muchas de mis pasiones, y que me desafía a mantenerme en constante movimiento y aprendizaje.
                     <br />
-                    Amante de los deportes, practico yoga, natación, acrobacia en tela y trapecio  y ski.
+                    Amante de los deportes, practico yoga, natación, acrobacia en tela y trapecio y ski.
                     <br />
                     Como abogada me desempeño en el aréa penal, especiálizandome en temáticas de género. Actualmente formo parte del equipo interdisciplinario del Centro de Acceso a la Justicia (CaJUS) dependiente del Ministerio de Justicia y DDHH de la Provincia de Bs.As, en el CaJUS descentralizado de Ezeiza.
                     <br />
@@ -108,6 +136,8 @@ export default function About(){
                     <strong>Idiomas</strong>
                     <br />
                     Inglés B1
+                    <br />
+                    Italiano A2
                     <br />
                     Arabe estándar A2
                     <br />

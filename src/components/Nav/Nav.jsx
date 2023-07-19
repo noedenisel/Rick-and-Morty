@@ -18,9 +18,8 @@ export default function NavBar({onSearch, logout}) {
             <SearchBar  onSearch={onSearch}></SearchBar>
         }
 
-
-{/** Links en home */}
-        <div>           
+       {/** Links en home */}
+       <div >           
                 {
                     location.pathname === "/home" &&
                         <button><Link to = "/favorites" className={styles.links}> Favorites </Link> </button>
@@ -88,10 +87,8 @@ export default function NavBar({onSearch, logout}) {
                         <button onClick={logout} className={styles.logout}>  Logout  </button>
                 }
        
-        </div>
-
-
-</div> 
+        </div> 
+</div>
 
 ) 
 }
