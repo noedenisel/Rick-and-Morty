@@ -1,32 +1,91 @@
+# Rick and Morty App
 
+Esta aplicación es parte del proyecto de integración del módulo 2: React del bootcamp Soy Henry. La app de Rick and Morty fue elegida como una de las mejores del grupo, lo que me permitió elegir el tema de mi proyecto individual.
 
-# Rick and Morty API
+## Descripción de la App
 
-Este repositorio contiene una aplicación web que consume la API pública de "Rick and Morty" para mostrar información sobre los personajes, episodios y ubicaciones de la serie animada.
+La aplicación de Rick and Morty es una SPA (Single Page Application) que nos permite explorar información sobre los personajes de la serie. La app consta de las siguientes funcionalidades:
 
-La aplicación está desarrollada en JavaScript utilizando el framework React, y se utiliza la librería axios para hacer las peticiones a la API. 
+- Visualización de personajes en forma de tarjetas.
+- Búsqueda de personajes por nombre.
+- Agregar personajes a la lista de favoritos.
+- Eliminar personajes de la lista de favoritos.
+- Vista de personajes favoritos.
 
-## Uso
+## Estructura del Proyecto
 
-Para utilizar esta aplicación, simplemente sigue estos pasos:
+El proyecto se encuentra estructurado de la siguiente manera:
 
-1. Clona este repositorio en tu ordenador: `git clone https://github.com/noedenisel/Rick-and-Morty.git`
-2. Accede al directorio del proyecto: `cd Rick-and-Morty`
-3. Instala las dependencias necesarias: `npm install`
-4. Inicia la aplicación: `npm start`
-5. Abre tu navegador web y accede a la dirección http://localhost:3000/
+```
+- carpeta img
+- carpeta public
+- carpeta src
+  - carpeta components
+    - Card.js
+    - Cards.js
+    - SearchBar.js
+    - Nav.js
+    - About.js
+    - Detail.js
+    - Form.js
+    - Favorites.js
+  - App.css
+  - App.js
+  - data.js
+  - index.css
+  - index.js
+- package.json
+- README.md
+```
 
-Una vez en la aplicación, podrás navegar entre las diferentes secciones y buscar información sobre tus favoritos de "Rick and Morty".
+## Componentes
 
-## Contribuciones
+A continuación se describe cada uno de los componentes creados para la aplicación:
 
-Si deseas contribuir al desarrollo de esta aplicación, por favor sigue estos pasos:
+### Card
 
-1. Haz un fork de este repositorio en tu cuenta de GitHub.
-2. Clona tu repositorio fork en tu ordenador: `git clone https://github.com/TU_NOMBRE_DE_USUARIO/Rick-and-Morty.git`
-3. Crea una rama para tus cambios: `git checkout -b mi-rama`
-4. Realiza tus cambios y guarda los archivos modificados.
-5. Confirma los cambios en tu repositorio: `git commit -am "Mi mensaje de confirmación"`
-6. Sube los cambios a tu repositorio en GitHub: `git push origin mi-rama`
-7. Crea un Pull Request en este repositorio desde la página de GitHub.
+El componente `Card` muestra la información de un personaje en forma de tarjeta. Recibe las siguientes props:
 
+- `name`: Nombre del personaje.
+- `species`: Especie del personaje.
+- `gender`: Género del personaje.
+- `image`: URL de la imagen del personaje.
+- `onClose`: Función que se ejecuta al hacer clic en el botón de cerrar.
+
+### Cards
+
+El componente `Cards` renderiza un conjunto de tarjetas de personajes. Recibe el arreglo de personajes como prop y utiliza el componente `Card` para renderizar cada uno de ellos.
+
+### SearchBar
+
+El componente `SearchBar` muestra una barra de búsqueda que permite buscar personajes por nombre. Recibe la función `onSearch` como prop, la cual se ejecuta al hacer clic en el botón de búsqueda.
+
+### Nav
+
+El componente `Nav` es una barra de navegación superior que contiene el componente `SearchBar` y enlaces a las diferentes secciones de la aplicación. Se muestra en todas las rutas excepto en la página de inicio de sesión.
+
+### About
+
+El componente `About` muestra información sobre el creador de la aplicación y una descripción de la misma. Es accesible a través del enlace de navegación correspondiente.
+
+### Detail
+
+El componente `Detail` muestra información detallada sobre un personaje específico. Recibe el ID del personaje como parámetro de la ruta.
+
+### Form
+
+El componente `Form` muestra un formulario de inicio de sesión donde se solicita un nombre de usuario y una contraseña. Realiza validaciones en tiempo real para verificar que se ingresen datos válidos.
+
+### Favorites
+
+El componente `Favorites` muestra la lista de personajes favoritos del usuario. Permite agregar y eliminar personajes de la lista de favoritos.
+
+## Instrucciones de Ejecución
+
+1. Clona el repositorio en tu máquina local.
+2. Abre una terminal en la carpeta raíz del proyecto.
+3. Ejecuta el comando `npm install` para instalar las dependencias.
+4. Ejecuta el comando `npm start` para iniciar la aplicación.
+5. Abre tu navegador web y ve a `http://localhost:3000` para acceder a la aplicación.
+
+¡Disfruta explorando los personajes de Rick and Morty en esta divertida aplicación!
