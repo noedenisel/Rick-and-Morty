@@ -2,6 +2,9 @@
 
 Esta aplicación es parte del proyecto de integración del módulo 2: React del bootcamp Soy Henry. La app de Rick and Morty fue elegida como una de las mejores del grupo, lo que me permitió elegir el tema de mi proyecto individual.
 
+##Deploy:
+https://rick-and-morty-noedenisel.vercel.app/
+
 ## Descripción de la App
 
 La aplicación de Rick and Morty es una SPA (Single Page Application) que nos permite explorar información sobre los personajes de la serie. La app consta de las siguientes funcionalidades:
