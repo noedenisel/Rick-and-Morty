@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Card from '../Card/Card';
@@ -8,10 +8,16 @@ import styles from '../Detail/Detail.module.css';
 
 export function Favorites({ myFavorites, deleteFavorites }) {
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Log para reflejar el estado de myFavorites
+    console.log("Current myFavorites state:", myFavorites);
+  }, [myFavorites]);
 
   function handleCardClose(id) {
     // Eliminar el personaje de la lista de favoritos utilizando la acción deleteFavorites
     deleteFavorites(id);
+    console.log("Elimine favorito:", deleteFavorites(id));
   }
 
   return (
@@ -24,8 +30,7 @@ export function Favorites({ myFavorites, deleteFavorites }) {
           gender={character.gender}
           image={character.image}
           id={character.id}
-          onClose={() => handleCardClose(character.id)} // Llamar a handleCardClose en el evento onClose
-        />
+          onClose={() => handleCardClose(character.id)} />
       ))}
      <div className={styles.buttonBack}>
         <button className={styles.links} onClick={() => navigate('/home')}>
@@ -37,7 +42,6 @@ export function Favorites({ myFavorites, deleteFavorites }) {
 }
 
 
-   
 function mapStateToProps(state) {
   return {
     myFavorites: state.myFavorites,
@@ -45,7 +49,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  deleteFavorites, // Utilizamos mapDispatchToProps como objeto para asignar directamente la acción deleteFavorites
+  deleteFavorites,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);

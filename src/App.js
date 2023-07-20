@@ -1,7 +1,7 @@
 //React
-import React, {useState} from "react"
-import { Route, Routes , useLocation, useNavigate, Navigate} from "react-router-dom"
-import { useEffect } from "react"
+import React, { useState, useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate, Navigate } from "react-router-dom";
+
 
 //Componentes
 import './App.css'
@@ -15,6 +15,8 @@ import Favorites from "./components/Favorites/Favorites"
 
 
 function App () {
+ 
+
 
     const [characters, setCharacters] = useState([]); //definicion del estado, devuelve el array
     //   characters == []
@@ -52,12 +54,11 @@ function App () {
           .then((data) => {
             if (data.name) {
               // Verificar si el personaje ya está en el estado 'characters'
-              const characterExists = characters.some(
-                (char) => char.id === data.id
-              );
-    
+              const characterExists = characters.some((char) => char.id === data.id);
+      
               if (!characterExists) {
                 setCharacters((oldCharacter) => [...oldCharacter, data]);
+                console.log('Character added:', data);
               } else {
                 window.alert('El personaje ya está en la lista.');
               }
@@ -66,6 +67,7 @@ function App () {
             }
           });
       }
+      
     
       function onClose(id) {
         setCharacters((oldCharacters) =>
@@ -79,6 +81,12 @@ function App () {
           );
         }
       }
+
+        // Log para capturar la navegación entre rutas
+  useEffect(() => {
+    console.log("Navigated to:", location.pathname);
+  }, [location.pathname]);
+
     
 
     return ( 
@@ -97,7 +105,7 @@ function App () {
           <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
           <Route  path="/About" element = {<About/>}/>
           <Route  path="/detail/:id" element = {<Detail/>}/>
-          <Route  path="/favorites" element = {<Favorites myFavorites={myFavorites} onClose={onClose}/>}/>
+          <Route  path="/favorites" element = {<Favorites />}/>
           <Route path ="/Error404" element = {<Error404/>}/>
           <Route path= "*" element={<Navigate to ="/Error404" />}/>
         </Routes>   

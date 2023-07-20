@@ -8,13 +8,14 @@ export function addFavorites (character) { //cambie el id por character
     } 
 }
 
-export function deleteFavorites (id) {
-    return {
-        type: DELETE_FAVORITES,
-        payload: id
-    }
-}
 
+export const deleteFavorites = (id) => {
+    return {
+      type: DELETE_FAVORITES,
+      payload: id,
+    };
+  };
+  
 export function filtrarPersonajes(gender){
     return {
         type: FILTER,

@@ -6,27 +6,26 @@ import { addFavorites, deleteFavorites } from '../../redux/actions/actions';
 import styles from './Card.module.css';
 
 function Card(props) {
-   const [isFav, setIsFav] = useState(false);
- 
-   useEffect(() => {
-     // Verificar si el personaje ya está en la lista de favoritos al cargar el componente
-     setIsFav(props.myFavorites.some((favorite) => favorite.id === props.id));
-   }, [props.myFavorites, props.id]);
- 
-   useEffect(() => {
-     // Actualizar el estado isFav cada vez que se modifica el estado de myFavorites
-     setIsFav(props.myFavorites.some((favorite) => favorite.id === props.id));
-   }, [props.myFavorites, props.id]);
+  const [isFav, setIsFav] = useState(false);
 
-  function handleFavorite() {
+  useEffect(() => {
+    // Verificar si el personaje ya está en la lista de favoritos al cargar el componente
+    setIsFav(props.myFavorites.some((favorite) => favorite.id === props.id));
+  }, []); 
+  
+   function handleFavorite() {
     if (isFav) {
       setIsFav(false);
       props.deleteFavorites(props.id); // Eliminar el personaje de la lista de favoritos
+      console.log('After deleting - myFavorites:', props.myFavorites);
     } else {
       setIsFav(true);
-      props.addFavorites(props); // Agregar el personaje a la lista de favoritos
+      const { id, name, species, gender, image } = props;
+      props.addFavorites({ id, name, species, gender, image }); // Agregar el personaje a la lista de favoritos
+      console.log('After adding - myFavorites:', props.myFavorites);
     }
   }
+  
 
 
   return (
@@ -92,3 +91,5 @@ function mapDispatchToProps(dispatch) {
  }
  
  export default connect(mapStateToProps, mapDispatchToProps)(Card);
+
+ 
