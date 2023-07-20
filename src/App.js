@@ -67,10 +67,19 @@ function App () {
           });
       }
     
-      function onClose(id){
-        setCharacters(oldCharacter => oldCharacter.filter(character => character.id !== id))
-        
+      function onClose(id) {
+        setCharacters((oldCharacters) =>
+          oldCharacters.filter((character) => character.id !== id)
+        );
+    
+        // Si el personaje también está en la lista de favoritos, eliminarlo de favoritos
+        if (myFavorites.some((favorite) => favorite.id === id)) {
+          setMyFavorites((oldFavorites) =>
+            oldFavorites.filter((favorite) => favorite.id !== id)
+          );
+        }
       }
+    
 
     return ( 
       <div className='App' style={{ padding: '25px' }}>

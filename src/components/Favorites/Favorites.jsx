@@ -1,45 +1,51 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import Card from '../Card/Card';
+import { deleteFavorites } from '../../redux/actions/actions';
 
-import { connect } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import styles from '../Detail/Detail.module.css';
 
-import  Card  from "../Card/Card";
+export function Favorites({ myFavorites, deleteFavorites }) {
+  const navigate = useNavigate();
 
-import styles from "../Detail/Detail.module.css"
+  function handleCardClose(id) {
+    // Eliminar el personaje de la lista de favoritos utilizando la acción deleteFavorites
+    deleteFavorites(id);
+  }
 
-
-export function Favorites({myFavorites, onClose}){
-
-    const navigate = useNavigate();
-
-    return (
-        <div>
-            {myFavorites.map(character => (
-                <Card
-                id = {character.id}
-                name={character.name} 
-                species={character.species} 
-                gender={character.gender} 
-                image={character.image} 
-                onClose= {() => onClose(character.id)}
-                >
-                </Card>
-            ))
-            }
-        
-            <div className={styles.buttonBack}>
-                <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
-            </div>
-        </div>
-
-    )
+  return (
+    <div>
+      {myFavorites.map((character) => (
+        <Card
+          key={character.id}
+          name={character.name}
+          species={character.species}
+          gender={character.gender}
+          image={character.image}
+          id={character.id}
+          onClose={() => handleCardClose(character.id)} // Llamar a handleCardClose en el evento onClose
+        />
+      ))}
+     <div className={styles.buttonBack}>
+        <button className={styles.links} onClick={() => navigate('/home')}>
+          Regresar a la página principal
+        </button>
+      </div>
+    </div>
+  );
 }
 
-export function mapStateToProps(state) {
-    return {
-       myFavorites : state.myFavorites
 
-    }
+   
+function mapStateToProps(state) {
+  return {
+    myFavorites: state.myFavorites,
+  };
 }
 
-export default connect (mapStateToProps)(Favorites)
- 
+const mapDispatchToProps = {
+  deleteFavorites, // Utilizamos mapDispatchToProps como objeto para asignar directamente la acción deleteFavorites
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
