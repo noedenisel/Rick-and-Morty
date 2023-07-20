@@ -32,8 +32,7 @@ export function Card(props) {
 
    return (
 
-   <div className={styles.card}>
-      
+   <div className={styles.card}>   
          <div>
             <button onClick={props.onClose} className={styles.button}>X</button>  
                { 
@@ -61,17 +60,14 @@ export function Card(props) {
       
             <div >
                <img className={styles.imgCharacter} src={props.image} alt="" />
-            </div>
-         
+            </div>      
          </div> 
-   
-      </div>
+   </div>
    );
 }
 
 export function mapDispatchToProps(dispatch){
    return {
-
       addFavorites: function(character){
          dispatch(addFavorites(character))
       },  
@@ -79,17 +75,13 @@ export function mapDispatchToProps(dispatch){
       deteleFavorite: function(id){
          dispatch(deleteFavorites(id))
       }
-
    }
-
 }
 
 export function mapStateToProps(state) {
       return {
          myFavorites : state.myFavorites
-
       }
-
 }
 
 export default connect (mapStateToProps, mapDispatchToProps)(Card)

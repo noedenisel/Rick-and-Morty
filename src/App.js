@@ -20,10 +20,11 @@ function App () {
     //   characters == []
     //                 setCharacters funcion que actualilza el estado
 
+    const [myFavorites, setMyFavorites] = useState([])
     const [access, setAccess] = useState(false);
     
-    const username = 'mail@example.com';
-    const password = '123456p';
+    //const username = 'mail@example.com';
+    //const password = '123456p';
 
     const location = useLocation()
     const navigate = useNavigate();
@@ -32,38 +33,44 @@ function App () {
       // !access && navigate('/');
       //  }, [access]);
       
-      function login(userData) {
-        if (userData.password === password && userData.username === username) {
-          setAccess(true);
-          navigate('/home');
-        }
-      }
+      // function login(userData) {
+      //   if (userData.password === password && userData.username === username) {
+      //     setAccess(true);
+      //     navigate('/home');
+      //   }
+      // }
 
       function logout (userData) {
-        
           setAccess(false);
           navigate('/');
-        
       }
 
 
-      function onSearch(character){    //hace una busqueda 
+      function onSearch(character) {
+        fetch(`https://rickandmortyapi.com/api/character/${character}`)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.name) {
+              // Verificar si el personaje ya está en el estado 'characters'
+              const characterExists = characters.some(
+                (char) => char.id === data.id
+              );
+    
+              if (!characterExists) {
+                setCharacters((oldCharacter) => [...oldCharacter, data]);
+              } else {
+                window.alert('El personaje ya está en la lista.');
+              }
+            } else {
+              window.alert('Inserte un ID válido para agregar un personaje.');
+            }
+          });
+      }
+    
+      function onClose(id){
+        setCharacters(oldCharacter => oldCharacter.filter(character => character.id !== id))
         
-      fetch(`https://rickandmortyapi.com/api/character/${character}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.name ) {
-            setCharacters((oldCharacter) => [...oldCharacter, data]);
-         } 
-         else {
-            window.alert('Inserte un ID para agregar un personaje');
-         }
-      });
-    }
-
-  function onClose(id){
-    setCharacters(oldCharacter => oldCharacter.filter(character => character.id !== id))
-  }
+      }
 
     return ( 
       <div className='App' style={{ padding: '25px' }}>
@@ -76,26 +83,18 @@ function App () {
           </div>
         }
         
-   
-<Routes>    
- 
-
-  {/* <Route  exact path="/" element = {<Form login={login} />}/ >    */}
-  <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
-  <Route  path="/About" element = {<About/>}/>
-  <Route  path="/detail/:id" element = {<Detail/>}/>
-  <Route  path="/favorites" element = {<Favorites onClose={onClose}/> }/>  
-  <Route path ="/Error404" element = {<Error404/>}/>
-  <Route path= "*" element={<Navigate to ="/Error404" />}/>
-  
-  
- 
- </Routes>   
-
-   
-</div>
-  )
-}
+        <Routes>    
+          {/* <Route  exact path="/" element = {<Form login={login} />} /> */}
+          <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
+          <Route  path="/About" element = {<About/>}/>
+          <Route  path="/detail/:id" element = {<Detail/>}/>
+          <Route  path="/favorites" element = {<Favorites myFavorites={myFavorites} onClose={onClose}/>}/>
+          <Route path ="/Error404" element = {<Error404/>}/>
+          <Route path= "*" element={<Navigate to ="/Error404" />}/>
+        </Routes>   
+      </div>
+    )
+  }
 
 export default  App
 
