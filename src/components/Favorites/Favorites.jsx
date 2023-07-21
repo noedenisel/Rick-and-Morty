@@ -1,17 +1,13 @@
-import React, { useState} from "react";
-import { connect , useDispatch } from 'react-redux';
+import React from "react";
+import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Card from '../Card/Card';
-import { deleteFavorites, orderCards } from '../../redux/actions/actions';
+import { deleteFavorites } from '../../redux/actions/actions';
 
 import styles from '../Detail/Detail.module.css';
-import style from "./Fav.module.css";
 
 export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
   const navigate = useNavigate();
-  const dispatch = useDispatch() 
-
-  const [order, setOrder] = useState('')
   
   function handleCardClose(id) {
     // Eliminar el personaje de la lista de favoritos utilizando la acción deleteFavorites
@@ -19,45 +15,9 @@ export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
     console.log("Elimine favorito:", deleteFavorites(id));
   }
 
-  function handleOrderCards(event){
-    dispatch(orderCards(event.target.value))
-    setOrder(`Ordered ${event.target.value}`)
-  }
-
 
   return (
     <div>
-      <div className={style.filterContent}>
-        <div>
-           <div className={style.filterTitle}>Ordenar por nombre: </div>
-            <div className={style.customSelect}>
-                <select name= "order" id= "" onChange={(event) => handleOrderCards(event)} > 
-                    <option value = "" >Select...</option>
-                    <option value="All">All</option>
-                    <option value = "Ascendente">Ascendente</option>
-                    <option value = "Descendente"> Descendente</option>
-                </select>
-            </div>
-        </div>
-       {/* <div>
-         <div className={style.filterTitle}>Filtrar por genero: </div>
-            <div className={style.customSelect}>
-                
-                <select name = "Género" id= ""  >  
-                    <option value = "">Select...</option>
-                    <option value="Characters">All</option> 
-                    <option value="Male">Masculino</option> 
-                    <option value="Female">Femenino</option> 
-                    <option value="Genderless">Genderless</option> 
-                    <option value="Unknown">Unknown</option> 
-                   
-                </select> 
-            </div>
-       </div> */}
-       
-            
-        </div>
-    
       {myFavorites.map((character) => (
         <Card
           key={character.id}

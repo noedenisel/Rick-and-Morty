@@ -2,17 +2,19 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate, Navigate } from "react-router-dom";
 
-
 //Componentes
 import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import NavBar from "./components/Nav/Nav"
 import About from "./components/About/About"
 import Detail from "./components/Detail/Detail"
-import Form from "./components/Form/Form"
+//import Form from "./components/Form/Form"
 import Error404 from "./components/Error 404/Error404"
 import Favorites from "./components/Favorites/Favorites"
+import Filtered from "./components/Filtered/Filtered";
 
+
+import style from "./components/Favorites/Fav.module.css"
 
 function App () {
  
@@ -22,12 +24,15 @@ function App () {
 
     const [myFavorites, setMyFavorites] = useState([])
     const [access, setAccess] = useState(false);
+
     
     //const username = 'mail@example.com';
     //const password = '123456p';
 
     const location = useLocation()
     const navigate = useNavigate();
+
+   
 
       // useEffect(() => {
       // !access && navigate('/');
@@ -87,8 +92,7 @@ function App () {
     console.log("Navigated to:", location.pathname);
   }, [location.pathname]);
 
-    
-
+  
     return ( 
       <div className='App' style={{ padding: '25px' }}>
         
@@ -99,7 +103,14 @@ function App () {
             
           </div>
         }
-        
+
+
+        {(location.pathname !== "/about" && location.pathname !== "/Error404" && location.pathname !=="/detail/:id") && 
+          <div>
+            <Filtered/>
+        </div>
+        }
+
         <Routes>    
           {/* <Route  exact path="/" element = {<Form login={login} />} /> */}
           <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
