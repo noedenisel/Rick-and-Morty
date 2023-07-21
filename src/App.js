@@ -14,8 +14,6 @@ import Favorites from "./components/Favorites/Favorites"
 import Filtered from "./components/Filtered/Filtered";
 
 
-import style from "./components/Favorites/Fav.module.css"
-
 function App () {
  
     const [characters, setCharacters] = useState([]); //definicion del estado, devuelve el array
@@ -34,31 +32,30 @@ function App () {
 
    
 
-      // useEffect(() => {
-      // !access && navigate('/');
-      //  }, [access]);
+    // useEffect(() => {
+    // !access && navigate('/');
+    //  }, [access]);
       
-      // function login(userData) {
-      //   if (userData.password === password && userData.username === username) {
-      //     setAccess(true);
-      //     navigate('/home');
-      //   }
-      // }
+    // function login(userData) {
+    //   if (userData.password === password && userData.username === username) {
+    //     setAccess(true);
+    //     navigate('/home');
+    //   }
+    // }
 
-      function logout (userData) {
-          setAccess(false);
-          navigate('/');
-      }
+    function logout (userData) {
+        setAccess(false);
+        navigate('/');
+    }
 
 
-      function onSearch(character) {
-        fetch(`https://rickandmortyapi.com/api/character/${character}`)
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.name) {
-              // Verificar si el personaje ya está en el estado 'characters'
-              const characterExists = characters.some((char) => char.id === data.id);
-      
+    function onSearch(character) {
+      fetch(`https://rickandmortyapi.com/api/character/${character}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.name) {
+            // ? Verificar si el personaje ya está en el estado 'characters'
+            const characterExists = characters.some((char) => char.id === data.id);
               if (!characterExists) {
                 setCharacters((oldCharacter) => [...oldCharacter, data]);
                 console.log('Character added:', data);
@@ -68,29 +65,28 @@ function App () {
             } else {
               window.alert('Inserte un ID válido para agregar un personaje.');
             }
-          });
-      }
+        });
+    }
       
     
-      function onClose(id) {
-        setCharacters((oldCharacters) =>
-          oldCharacters.filter((character) => character.id !== id)
-        );
+    function onClose(id) {
+      setCharacters((oldCharacters) =>
+        oldCharacters.filter((character) => character.id !== id)
+      );
     
-        // Si el personaje también está en la lista de favoritos, eliminarlo de favoritos
-        if (myFavorites.some((favorite) => favorite.id === id)) {
-          setMyFavorites((oldFavorites) =>
-            oldFavorites.filter((favorite) => favorite.id !== id)
-            );
-          setMyFavorites((oldFavorites) => oldFavorites.filter((favorite) => favorite.id !== id));
- 
-        }
+    // ? Si el personaje también está en la lista de favoritos, eliminarlo de favoritos
+      if (myFavorites.some((favorite) => favorite.id === id)) {
+        setMyFavorites((oldFavorites) =>
+          oldFavorites.filter((favorite) => favorite.id !== id)
+          );
+        setMyFavorites((oldFavorites) => oldFavorites.filter((favorite) => favorite.id !== id));
       }
+    }
 
-        // Log para capturar la navegación entre rutas
-  useEffect(() => {
-    console.log("Navigated to:", location.pathname);
-  }, [location.pathname]);
+    // ? Log para capturar la navegación entre rutas
+    useEffect(() => {
+      console.log("Navigated to:", location.pathname);
+    }, [location.pathname]);
 
   
     return ( 
@@ -108,7 +104,7 @@ function App () {
         {(location.pathname !== "/about" && location.pathname !== "/Error404" && location.pathname !=="/detail/:id") && 
           <div>
             <Filtered/>
-        </div>
+          </div>
         }
 
         <Routes>    

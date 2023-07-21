@@ -70,19 +70,6 @@ export default function About(){
                 <br />
                 
                 <div className={styles.cardAbout}>
-                <h3 className={styles.h3}>Especialización FrontEnd</h3>
-                    <p><strong>Alura</strong></p>
-                    <p> Actualmente me encuentro cursando la especialización FrontEnd en Alura. </p>
-                    {/* <p> Ruta de aprendizaje:
-                    <strong>M1:</strong>Aprobado. En él vimos introduccioón a CSS - JavaScript Avanzado I y II - Estructura de datos I, II y III - Algoritmos I y II
-                    <br />
-                    <strong>M2 FrontEnd:</strong>Enn curso. Dom Avanzado -  CSS avanzado - ES6 selectores - AJAX - Módulos y Bundlers - React - Redux 
-                    <br/>
-                    <strong>M3 BackEnd: </strong>Node Js - Promises - Web Server - Advance Promises - Express - Testing
-                    <br />
-                    <strong>M4 Base de Datos:</strong>DBMS - SQL - ORM - Autenticación </p> */}
-                    
-                    <br />
 
                     <h3 className={styles.h3}>Formación Full Stack Developer</h3>
                     <p><strong>Henry</strong></p>
@@ -146,15 +133,15 @@ export default function About(){
                 <br />
 
                 <div>
-                <ul className={styles.list}>
-                    <li className={styles.li}><a href="https://www.linkedin.com/in/noedenisel"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li className={styles.li}><a href="https://www.github.com/noedenisel"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+                    <ul className={styles.list}>
+                        <li className={styles.li}><a href="https://www.linkedin.com/in/noedenisel"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li className={styles.li}><a href="https://www.github.com/noedenisel"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
                 </div>
 
-            <div className={styles.buttonBack}>
-                <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
-            </div>
+                <div className={styles.buttonBack}>
+                    <button className={styles.links} onClick={()=> navigate("/home")}>Regresar a la página principal</button>
+                </div>
         
         </div>
     )

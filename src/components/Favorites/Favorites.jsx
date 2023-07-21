@@ -10,7 +10,7 @@ export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
   const navigate = useNavigate();
   
   function handleCardClose(id) {
-    // Eliminar el personaje de la lista de favoritos utilizando la acción deleteFavorites
+    // ? Eliminar el personaje de la lista de favoritos utilizando la acción deleteFavorites
     deleteFavorites(id);
     console.log("Elimine favorito:", deleteFavorites(id));
   }

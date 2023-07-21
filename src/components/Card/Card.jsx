@@ -10,19 +10,19 @@ function Card(props) {
   const [isFav, setIsFav] = useState(false);
 
   useEffect(() => {
-    // Verificar si el personaje ya está en la lista de favoritos al cargar el componente
+    // ? Verificar si el personaje ya está en la lista de favoritos al cargar el componente
     setIsFav(props.myFavorites.some((favorite) => favorite.id === props.id));
   }, []); 
   
-   function handleFavorite() {
+  function handleFavorite() {
     if (isFav) {
       setIsFav(false);
-      props.deleteFavorites(props.id); // Eliminar el personaje de la lista de favoritos
+      props.deleteFavorites(props.id); //? Eliminar el personaje de la lista de favoritos
       console.log('After deleting - myFavorites:', props.myFavorites);
     } else {
       setIsFav(true);
       const { id, name, species, gender, image } = props;
-      props.addFavorites({ id, name, species, gender, image }); // Agregar el personaje a la lista de favoritos
+      props.addFavorites({ id, name, species, gender, image }); //? Agregar el personaje a la lista de favoritos
       console.log('After adding - myFavorites:', props.myFavorites);
     }
   }
@@ -32,19 +32,11 @@ function Card(props) {
   return (
     <div className={styles.card}>
       <div>
-        <button onClick={props.onClose} className={styles.button}>
-          X
-        </button>
+        <button onClick={props.onClose} className={styles.button}>X</button>
         {isFav ? (
-          <button className={styles.button} onClick={handleFavorite}>
-            {' '}
-            ❤️{' '}
-          </button>
+          <button className={styles.button} onClick={handleFavorite}>{' '}❤️{' '}</button>
         ) : (
-          <button className={styles.button} onClick={handleFavorite}>
-            {' '}
-            🤍{' '}
-          </button>
+          <button className={styles.button} onClick={handleFavorite}>{' '}🤍{' '}</button>
         )}
       </div>
 
@@ -74,23 +66,23 @@ function Card(props) {
 }
 
 function mapDispatchToProps(dispatch) {
-   return {
-     addFavorites: function (character) {
-       dispatch(addFavorites(character));
-     },
+  return {
+    addFavorites: function (character) {
+      dispatch(addFavorites(character));
+    },
  
-     deleteFavorites: function (id) {
-       dispatch(deleteFavorites(id));
-     },
-   };
- }
+    deleteFavorites: function (id) {
+      dispatch(deleteFavorites(id));
+    },
+  };
+}
  
- function mapStateToProps(state) {
-   return {
-     myFavorites: state.myFavorites,
-   };
- }
+function mapStateToProps(state) {
+  return {
+    myFavorites: state.myFavorites,
+  };
+}
  
- export default connect(mapStateToProps, mapDispatchToProps)(Card);
+export default connect(mapStateToProps, mapDispatchToProps)(Card);
 
  
