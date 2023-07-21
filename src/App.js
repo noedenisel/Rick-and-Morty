@@ -16,8 +16,6 @@ import Favorites from "./components/Favorites/Favorites"
 
 function App () {
  
-
-
     const [characters, setCharacters] = useState([]); //definicion del estado, devuelve el array
     //   characters == []
     //                 setCharacters funcion que actualilza el estado
@@ -78,7 +76,9 @@ function App () {
         if (myFavorites.some((favorite) => favorite.id === id)) {
           setMyFavorites((oldFavorites) =>
             oldFavorites.filter((favorite) => favorite.id !== id)
-          );
+            );
+          setMyFavorites((oldFavorites) => oldFavorites.filter((favorite) => favorite.id !== id));
+ 
         }
       }
 
@@ -105,7 +105,7 @@ function App () {
           <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
           <Route  path="/About" element = {<About/>}/>
           <Route  path="/detail/:id" element = {<Detail/>}/>
-          <Route  path="/favorites" element = {<Favorites />}/>
+          <Route  path="/favorites" element = {<Favorites myFavorites={myFavorites} deleteFavorites={onClose}/>}/>
           <Route path ="/Error404" element = {<Error404/>}/>
           <Route path= "*" element={<Navigate to ="/Error404" />}/>
         </Routes>   

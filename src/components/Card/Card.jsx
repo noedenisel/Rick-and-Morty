@@ -6,6 +6,7 @@ import { addFavorites, deleteFavorites } from '../../redux/actions/actions';
 import styles from './Card.module.css';
 
 function Card(props) {
+  
   const [isFav, setIsFav] = useState(false);
 
   useEffect(() => {
