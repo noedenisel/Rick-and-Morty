@@ -12,7 +12,7 @@ export default function favorites  (state = initialState, action)  {
         case ADD_FAVORITES:
             return{
                 allCharacters: [...state.allCharacters, action.payload],
-                myFavorites: [...state.allCharacters, action.payload]
+                myFavorites: [...state.myFavorites, action.payload]
             }
 
             case DELETE_FAVORITES:
