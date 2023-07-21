@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 import { deleteFavorites, orderCards } from '../../redux/actions/actions';
 
 import styles from '../Detail/Detail.module.css';
+import style from "./Fav.module.css";
 
 export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
   const navigate = useNavigate();
@@ -26,9 +27,10 @@ export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
 
   return (
     <div>
-      <div>
-            <div>
-                Ordenar por nombre:  
+      <div className={style.filterContent}>
+        <div>
+           <div className={style.filterTitle}>Ordenar por nombre: </div>
+            <div className={style.customSelect}>
                 <select name= "order" id= "" onChange={(event) => handleOrderCards(event)} > 
                     <option value = "" >Select...</option>
                     <option value="All">All</option>
@@ -36,17 +38,23 @@ export function Favorites({ myFavorites, deleteFavorites, filtrarPersonajes }) {
                     <option value = "Descendente"> Descendente</option>
                 </select>
             </div>
-
-            <div>
-                Filtrar por Genero:
+        </div>
+       {/* <div>
+         <div className={style.filterTitle}>Filtrar por genero: </div>
+            <div className={style.customSelect}>
+                
                 <select name = "Género" id= ""  >  
                     <option value = "">Select...</option>
                     <option value="Characters">All</option> 
                     <option value="Male">Masculino</option> 
                     <option value="Female">Femenino</option> 
-                    <option value="Female">Genderless</option> 
+                    <option value="Genderless">Genderless</option> 
+                    <option value="Unknown">Unknown</option> 
+                   
                 </select> 
             </div>
+       </div> */}
+       
             
         </div>
     
