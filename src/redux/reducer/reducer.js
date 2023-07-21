@@ -30,12 +30,12 @@ export default function favorites  (state = initialState, action)  {
                 }
 
         case ORDER:
-            const { sortedCharacters } = state.allCharacters
+            const sortedCharacters  = state.allCharacters
                 if (action.payload === "Ascendente") {
                     sortedCharacters.sort((a,b) => a.id - b.id)
-                } else {
+                } else if (action.payload === "Descendente"){
                     sortedCharacters.sort((a,b) => b.id - a.id)
-           }
+           } 
            return {
             ...state,
             myFavorites: sortedCharacters,
