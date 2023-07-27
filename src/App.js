@@ -8,7 +8,7 @@ import Cards from './components/Cards/Cards.jsx'
 import NavBar from "./components/Nav/Nav"
 import About from "./components/About/About"
 import Detail from "./components/Detail/Detail"
-//import Form from "./components/Form/Form"
+import Form from "./components/Form/Form"
 import Error404 from "./components/Error 404/Error404"
 import Favorites from "./components/Favorites/Favorites"
 import Filtered from "./components/Filtered/Filtered";
@@ -24,24 +24,24 @@ function App () {
     const [access, setAccess] = useState(false);
 
     
-    //const username = 'mail@example.com';
-    //const password = '123456p';
+const username = 'mail@example.com';
+ const password = '123456p';
 
     const location = useLocation()
     const navigate = useNavigate();
 
    
 
-    // useEffect(() => {
-    // !access && navigate('/');
-    //  }, [access]);
+    useEffect(() => {
+    !access && navigate('/');
+     }, [access]);
       
-    // function login(userData) {
-    //   if (userData.password === password && userData.username === username) {
-    //     setAccess(true);
-    //     navigate('/home');
-    //   }
-    // }
+    function login(userData) {
+      if (userData.password === password && userData.username === username) {
+        setAccess(true);
+        navigate('/home');
+      }
+    }
 
     function logout (userData) {
         setAccess(false);
@@ -58,7 +58,6 @@ function App () {
             const characterExists = characters.some((char) => char.id === data.id);
               if (!characterExists) {
                 setCharacters((oldCharacter) => [...oldCharacter, data]);
-                console.log('Character added:', data);
               } else {
                 window.alert('El personaje ya está en la lista.');
               }
@@ -85,7 +84,6 @@ function App () {
 
     // ? Log para capturar la navegación entre rutas
     useEffect(() => {
-      console.log("Navigated to:", location.pathname);
     }, [location.pathname]);
 
   
@@ -101,14 +99,14 @@ function App () {
         }
 
 
-        {(location.pathname !== "/about" && location.pathname !== "/Error404" && location.pathname !=="/detail/:id") && 
+        {(location.pathname !== "/" &&location.pathname !== "/about" && location.pathname !== "/Error404" && location.pathname !=="/detail/:id") && 
           <div>
             <Filtered/>
           </div>
         }
 
         <Routes>    
-          {/* <Route  exact path="/" element = {<Form login={login} />} /> */}
+           <Route  exact path="/" element = {<Form login={login} />} />
           <Route path = "/home" element = {<Cards characters={characters} onClose={onClose}/>} />  
           <Route  path="/About" element = {<About/>}/>
           <Route  path="/detail/:id" element = {<Detail/>}/>

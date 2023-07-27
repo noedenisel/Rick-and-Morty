@@ -14,7 +14,6 @@ export default function SearchBar({onSearch}) {
          <button onClick={()=> onSearch(searchCharacter)} className={styles.buttonAgregar}>Agregar</button> 
          <button onClick={() => {
    const randomId = Math.floor(Math.random() * 826);
-   console.log('Random character ID:', randomId);
    onSearch(randomId);
 }} className={styles.buttonAgregar}>
    Personaje Random

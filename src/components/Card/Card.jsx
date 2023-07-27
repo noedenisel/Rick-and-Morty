@@ -18,12 +18,10 @@ function Card(props) {
     if (isFav) {
       setIsFav(false);
       props.deleteFavorites(props.id); //? Eliminar el personaje de la lista de favoritos
-      console.log('After deleting - myFavorites:', props.myFavorites);
     } else {
       setIsFav(true);
       const { id, name, species, gender, image } = props;
       props.addFavorites({ id, name, species, gender, image }); //? Agregar el personaje a la lista de favoritos
-      console.log('After adding - myFavorites:', props.myFavorites);
     }
   }
   
@@ -58,7 +56,7 @@ function Card(props) {
         </div>
 
         <div>
-          <img className={styles.imgCharacter} src={props.image} alt="" />
+          <img  src={props.image} alt="" />
         </div>
       </div>
     </div>
